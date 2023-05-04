@@ -1,0 +1,60 @@
+---
+title: 137
+published: 2008-10-08T01:37:56Z
+categories: Physics
+tags: 137,fine-structure constant,memorial,quantum mechanics
+---
+
+[mathjax]
+
+In physics, there are quite a few fundamental constants that describe our universe.  The <a href="http://en.wikipedia.org/wiki/Speed_of_light">speed of light in a vacuum</a> \(c\), the <a href="http://en.wikipedia.org/wiki/Vacuum_permittivity">vacuum permeability</a> \(\mu_0\), the <a href="http://en.wikipedia.org/wiki/Planck_constant">Planck constant</a> \(h\), and the <a href="http://en.wikipedia.org/wiki/Elementary_charge">elementary charge</a> \(e\) are examples of such constants.
+
+<!--more-->
+
+[latex]c = 299792458 \,\mathrm{m/s}[/latex]
+[latex]\mu_0 = 4 \pi \times 10^{-7} \,\mathrm{N/A^2}[/latex]
+[latex]h \approx 6.62606896 \times 10^{-34} \,\mathrm{J \cdot s}[/latex]
+[latex]e \approx 1.602176487 \times 10^{-19} \,\mathrm{C}[/latex]
+
+If you look to the right of the numbers above, you'll notice a series of letter combinations.  These denote the units that each constant is expressed in.  With different units, the numerical value for each constant would also change.  For example, the speed of light would be 983,571,056.4 feets per second in the awkward <a href="http://en.wikipedia.org/wiki/Imperial_units">imperial unit system</a>.  And physicists often use a <a href="http://en.wikipedia.org/wiki/Natural_units">natural unit system</a> where many constants are <em>defined</em> to be 1, which often simplify mathematical expressions in physics.
+<h3>Dimensionless constants</h3>
+On the other hand, there are also physical constants that will have the same value no matter what unit system is used.  Examples are the ratio of charges between a proton and an electron, the ratio of masses between a proton and an electron, and the <a href="http://physics.nist.gov/cuu/Constants/alpha.html">fine-structure constant</a>.  These constants are <a href="http://en.wikipedia.org/wiki/Dimensionless_quantity"><em>dimensionless</em></a> in that their values are independent of any physical units.  If there is intelligent life out there that is vastly different from us, such as a hypothetical interstellar-sized life form where one unit of distance is several light-years and one unit of time is millions of years, they would still obtain the same values for these dimensionless constants as we do.
+
+For some dimensionless constants, such as the ratio of charges between a proton and an electron (which is -1), the values are simple integers or other well-defined and "clean" numbers, and it's much easier to swallow the argument that "it's just the way things are".  And for those searching for a more fundamental reason, it's easy to think that there is some sort of symmetry involved.
+
+On the other hand, there are other dimensionless constants that are not so neat.  The ratio of masses between a proton and an electron is about 1836, while the fine-structure constant is about \(\frac{1}{137}\).  These are "messy" numbers that look rather arbitrary, so one could wonder if these constants are actually a result of more fundamental principles which don't require arbitrary-looking numbers.  An alternative is that there is a universe for every possible combination of dimensionless constants, and our universe is just one out of a multitude of universes.  No one really has a clue at the moment.
+<h3>Fine-structure constant</h3>
+Most people with a rudimentary knowledge of physics has an idea of what ratios of masses and charges mean.  But what is the fine-structure constant?  Why are particle physicists so crazy about the number 137, an approximate inverse of the fine-structure constant?
+
+The fine-structure constant, often denoted by the Greek letter \(\alpha\), is defined by multiplying and dividing a combination of various physical constants from electromagnetism and quantum mechanics:
+
+[latex]\displaystyle \alpha = \frac{e^2 c \mu_0}{2h} \approx \frac{1}{137.035999070}[/latex]
+
+But physicists didn't just try out a combination of physical constants to get a dimensionless constant for its own sake.  The fine-structure constant \(\alpha\) started out life as part of an explanation for certain minute details in atomic spectra.  During the nineteenth century, it was discovered that different atomic elements absorbed and emitted light only at certain wavelengths, which show up as dark or bright lines in a spectrum and so they are hence called <em>spectral lines</em>.  And during the early twentieth century, <a href="http://en.wikipedia.org/wiki/Niels_Bohr">Niels Bohr</a> constructed a <a href="http://en.wikipedia.org/wiki/Bohr_model">theoretical model</a> that successfully predicted the coarse spectral lines of the hydrogen atom.  His model was based on electrons only being able to have discrete orbits around a central proton.
+
+[caption id="attachment_618" align="aligncenter" width="500" caption="Hydrogen spectral lines"]<a href="http://blog.chungyc.org/wp-content/uploads/2008/10/broad-spectrum.png"><img src="http://blog.chungyc.org/wp-content/uploads/2008/10/broad-spectrum.png" alt="Hydrogen spectral lines" width="500" height="118" class="size-full wp-image-618"></a>[/caption]
+
+However, a very close look at the hydrogen spectral lines showed that Bohr's model didn't <em>quite</em> get everything right.  By magnifying the above spectrum over a thousand times, we can see that the red spectral line is actually <em>two</em> spectral lines spaced very close together.
+
+[caption id="attachment_621" align="aligncenter" width="500" caption="Fine structure of hydrogen spectral lines"]<a href="http://blog.chungyc.org/wp-content/uploads/2008/10/fine-structure.png"><img src="http://blog.chungyc.org/wp-content/uploads/2008/10/fine-structure.png" alt="Fine structure of hydrogen spectral lines" width="500" height="117" class="size-full wp-image-621"></a>[/caption]
+
+This is where the fine-structure constant \(\alpha\) comes in.  <a href="http://en.wikipedia.org/wiki/Arnold_Sommerfeld">Arnold Sommerfeld</a> managed to explain the very small splitting of spectral lines by extending Bohr's model with elliptic orbits and special relativity.  Instead of just assuming circular orbits for electrons as Bohr did, Sommerfeld postulated that there was also an associated set of discrete <em>elliptic</em> orbits for each possible circular orbit.  And by considering the change of relativistic mass of an electron with different orbits, he was able to explain the tiny splitting of hydrogen spectral lines.
+
+Bohr's model of the hydrogen atom was semi-classical, however, and was unable to explain even finer details of atomic spectra, nor was it applicable to a myriad of other atomic and subatomic phenomenon.  It would eventually give way to a fully quantum mechanical approach pioneered by <a href="http://en.wikipedia.org/wiki/Werner_Heisenberg">Heisenberg</a> and <a href="http://en.wikipedia.org/wiki/Erwin_SchrÃ¶dinger">Shrödinger</a>, which would be extended to incorporate special relativity by <a href="http://en.wikipedia.org/wiki/Paul_dirac">Paul Dirac</a>.  But the fine-structure constant still lived on as even Dirac's new theory for electrons used it to calculate the fine structure in atomic spectral lines.
+
+And with the development of quantum electrodynamics, an even more accurate quantum theory for electromagnetism, the fine-structure constant starts playing a fundamental role instead of just being part of a formula for calculating spectral lines.  It is a measure for the strength of the electromagnetic force and describes how strongly electrons and photons interact with each other.  In fact, it is one of the 25 fundamental constants required by the <a href="http://en.wikipedia.org/wiki/Standard_Model">Standard Model</a> of particle physics.
+<h3>Value of the fine-structure constant</h3>
+While there have been attempts to derive the value of the fine-structure constant through first principles, they tend to be post hoc.  The only reliable way to currently obtain the value is to go out and do experiments that measure the constant.  One way to do this is to measure the speed of light in a vacuum, the vacuum permeability, the Planck constant, and the elementary charge and plug them into the formula defining the fine-structure constant.  And given that the speed of light and the vacuum permeability are <em>defined</em> as specific values today (which is only possible because our theories for electromagnetism have proven to be so reliable), we only need to measure the Planck constant and the elementary charge.
+
+The fine-structure constant can also be measured directly.  One way is to take advantage of the phenomenon it was originally created for: the fine structure of spectral lines.  However, this would assume that there is no further splitting of spectral lines beyond those resulting from a relativistic model of the hydrogen atom.  The existence of other influences that result in details such as the <a href="http://en.wikipedia.org/wiki/Hyperfine_structure">hyperfine structure</a> of spectral lines means that there is a limit to this method's reliability.
+
+With the development of quantum electrodynamics, even better means for directly measuring the fine-structure constant were discovered.  Measurements of the <a href="http://en.wikipedia.org/wiki/Anomalous_magnetic_moment">anomalous magnetic moment</a> of the electron gives the most precise values for the constant.  Methods taking advantage of the <a href="http://en.wikipedia.org/wiki/Quantum_Hall_effect">quantum Hall effect</a> also provide an independent method of directly measuring the fine-structure constant.
+
+Whatever measurement method is used, the fine-structure constant \(\alpha\) turns out to be close to the inverse of 137.  In fact, once upon a time there were speculations that the inverse might be <em>exactly</em> 137, but sufficiently precise measurements ruled out this possibility.  The most precise value for the fine-structure constant today is:
+
+[latex]\displaystyle \alpha = 7.297352570 \times 10^{-3} = \frac{1}{137.035999070}[/latex]
+
+with an uncertainty of \(5 \times 10^{-12}\).  Given the apparent arbitrariness of this dimensionless constant despite being fundamental for the electromagnetic force, it's no surprise that particle physicists know the number 137 by heart and scratch their heads wondering where it comes from.  Not to mention that 137 looks better and is easier to say than 0.007297, which can be quite a mouthful.  The inverse is also suspiciously close to the integer 137, which has some people wondering if there's a fundamental principle lurking beneath this factoid.
+<h3>137</h3>
+Now that you know why physicists love 137, you might be wondering about other properties of the <a href="http://en.wikipedia.org/wiki/137_(number)">number 137</a>.  For one thing, it's the 33rd smallest prime number.  For another, this is my 137th post to this blog; in fact, I wrote this post about the fine-structure constant to commemorate the occasion.
+
