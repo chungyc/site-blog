@@ -60,8 +60,9 @@ genericStyle = do
   footer ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
     fontSize $ em 0.75
-    paddingTop $ em 0.5
-    marginTop $ em 2
+    lineHeight $ unitless 1.5
+    paddingTop $ em 1
+    marginTop $ em 3
     borderTop (px 1) solid black
 
   dt ? do
@@ -77,7 +78,7 @@ genericStyle = do
 
 headings :: Css
 headings = do
-  h1 <> h2 <> h3 <> h4 <> h5 <> h6 ?
+  (h1 <> h2 <> h3 <> h4 <> h5 <> h6) ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
 
   h1 ? fontSize (em 2)
@@ -164,6 +165,8 @@ lightColorScheme = do
   header |> (div # ".site-title" <> div # ".slogan") ? do
     fontColor $ rgb 6 63 120
 
+  footer ? do
+    fontColor $ rgb 6 63 120
   where
     headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
 
@@ -183,8 +186,10 @@ darkColorScheme = do
   header |> (div # ".site-title" <> div # ".slogan") ? do
     fontColor $ rgb 187 219 250
 
+  footer ? do
+    fontColor $ rgb 187 219 250
+
   figure |> img # (not ".keep-colors" <> "src" $= ".svg") ? do
     filter (invert $ pct 100)
-
   where
     headingColor n = rgb (255 - n * 20) (255 - n * 20) (155 - n * 10)

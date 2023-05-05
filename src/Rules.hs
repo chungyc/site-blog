@@ -55,9 +55,20 @@ pageRules = do
   create ["index.html"] $ do
     route idRoute
     compile $ do
-      let frontContext = boolField "front" (const True) <> defaultContext
+      posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/**" "posts"
+
+      let frontContext =
+            mconcat
+              [ boolField "front" (const True),
+                listField "posts" postContext (pure posts),
+                constField "description" "Random musings in a variety of subjects, from science to religion.",
+                constField "title" "Archives",
+                defaultContext
+              ]
+
       makeItem ""
         >>= saveSnapshot "sitemap"
+        >>= loadAndApplyTemplate "templates/front.html" frontContext
         >>= loadAndApplyTemplate defaultTemplate frontContext
         >>= cleanupUrls
 
@@ -76,8 +87,8 @@ pageRules = do
 
       let archiveContext =
             mconcat
-              [ listField "posts" defaultContext (pure posts),
-                constField "description" "Random musings in a variety of subjects, from science to religion.",
+              [ listField "posts" postContext (pure posts),
+                constField "description" "Archive of posts for the Stochastic Scribbles blog.",
                 constField "title" "Archives",
                 defaultContext
               ]
@@ -96,8 +107,8 @@ postRules = do
       pandocCompiler
         >>= saveSnapshot "sitemap"
         >>= saveSnapshot "posts"
-        >>= loadAndApplyTemplate "templates/post.html" defaultContext
-        >>= loadAndApplyTemplate defaultTemplate defaultContext
+        >>= loadAndApplyTemplate "templates/post.html" postContext
+        >>= loadAndApplyTemplate defaultTemplate postContext
         >>= cleanupUrls
 
   create ["feed/index.xml"] $ do
@@ -181,3 +192,6 @@ haskellCompiler = do
     -- We will run the code from the file directly,
     -- so we don't care about any content in an item.
     emptyItem = makeItem ""
+
+postContext :: Context String
+postContext = defaultContext

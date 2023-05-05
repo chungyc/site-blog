@@ -5,5 +5,6 @@ categories: Politics
 tags: insurrection
 ---
 
-This was <a href="https://www.nytimes.com/2021/01/07/us/politics/protests-trump.html">a day</a> that was worse than I expected, but was better than I feared.  Unfortunately, there are still two more weeks for my fears to be exceeded.
-
+This was [a day](https://www.nytimes.com/2021/01/07/us/politics/protests-trump.html)
+that was worse than I expected, but was better than I feared.
+Unfortunately, there are still two more weeks for my fears to be exceeded.
