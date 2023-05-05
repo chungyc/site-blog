@@ -4,7 +4,9 @@ published: 2008-09-03
 ---
 
 Stochastic Scribbles is a blog maintained by [Yoo Chung](https://chungyc.org),
-where he talks about anything non-personal that catches his fancy.
+which is where they quickly scribble down random things that catches their fancy.
+It really is supposed to be a web log for jotting down thoughts and opinions
+without delving into a subject matter too deeply.
 
 Everything that is written in Stochastic Scribbles is solely from the viewpoint of the author.
 None of the content should be interpreted as being presented
