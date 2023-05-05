@@ -181,7 +181,6 @@ lightColorScheme = do
 
   blockquote ? do
     backgroundColor $ rgb 245 245 245
-
   where
     headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
 
