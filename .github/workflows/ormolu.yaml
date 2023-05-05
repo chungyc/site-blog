@@ -1,0 +1,24 @@
+name: Ormolu
+permissions: read-all
+
+on:
+  push:
+    paths:
+      - '**.hs'
+      - '**.lhs'
+  pull_request:
+    paths:
+      - '**.hs'
+      - '**.lhs'      
+
+jobs:
+  ormolu:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: haskell-actions/run-ormolu@v11
+        with:
+          respect-cabal-files: false
+          extra-args: '-o -XGHC2021 -o -XOverloadedStrings'
