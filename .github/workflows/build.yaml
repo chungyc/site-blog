@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: haskell-actions/setup
+      - uses: haskell-actions/setup@main
         with:
           enable-stack: true
 
