@@ -76,6 +76,17 @@ genericStyle = do
 
   li |> (ul <> ol) ? marginTop (em 0.75)
 
+  blockquote ? do
+    marginTop $ em 1
+    marginBottom $ em 1
+    marginLeft $ em 0
+    marginRight $ em 0
+    paddingTop $ em 1
+    paddingBottom $ em 1
+    paddingLeft $ em 3
+    paddingRight $ em 3
+    fontStyle oblique
+
 headings :: Css
 headings = do
   (h1 <> h2 <> h3 <> h4 <> h5 <> h6) ? do
@@ -167,6 +178,10 @@ lightColorScheme = do
 
   footer ? do
     fontColor $ rgb 6 63 120
+
+  blockquote ? do
+    backgroundColor $ rgb 245 245 245
+
   where
     headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
 
@@ -188,6 +203,9 @@ darkColorScheme = do
 
   footer ? do
     fontColor $ rgb 187 219 250
+
+  blockquote ? do
+    backgroundColor $ rgb 10 10 10
 
   figure |> img # (not ".keep-colors" <> "src" $= ".svg") ? do
     filter (invert $ pct 100)
