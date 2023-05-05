@@ -42,6 +42,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - blog
+    - hakyll
 
     # Work around https://github.com/sol/hpack/issues/303.
     when:
