@@ -5,7 +5,9 @@
 -- Maintainer: web@chungyc.org
 module Rules (rules) where
 
+import Data.ByteString.Lazy (ByteString)
 import Hakyll
+import Icons
 
 rules :: Rules ()
 rules = do
@@ -29,9 +31,9 @@ serverRules = do
     route $ constRoute "robots.txt"
     compile copyFileCompiler
 
-  match "server/favicon.*" $ do
+  create ["favicon.svg"] $ do
     route idRoute
-    compile copyFileCompiler
+    compile $ generateIcon favicon
 
   match "server/errors/*.markdown" $ do
     route $ setExtension "html"
@@ -181,12 +183,12 @@ cleanupUrl url@('/' : _)
     prefix = needlePrefix "index.html" url
 cleanupUrl url = url
 
-haskellCompiler :: Compiler (Item String)
+haskellCompiler :: Compiler (Item ByteString)
 haskellCompiler = do
   file <- getResourceFilePath
   emptyItem >>= withItemBody (run file)
   where
-    run f = unixFilter "runhaskell" $ args ++ [f]
+    run f = unixFilterLBS "runhaskell" $ args ++ [f]
     args = ["-XGHC2021", "-XOverloadedStrings"]
 
     -- We will run the code from the file directly,

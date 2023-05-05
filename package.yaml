@@ -31,6 +31,12 @@ library:
   source-dirs: src
   dependencies:
   - hakyll
+  - bytestring
+  - diagrams-core
+  - diagrams-lib
+  - diagrams-svg
+  - random
+  - svg-builder
 
 executables:
   site:
