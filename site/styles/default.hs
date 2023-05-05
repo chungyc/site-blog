@@ -205,7 +205,7 @@ darkColorScheme = do
     fontColor $ rgb 187 219 250
 
   blockquote ? do
-    backgroundColor $ rgb 10 10 10
+    backgroundColor $ rgb 30 30 30
 
   figure |> img # (not ".keep-colors" <> "src" $= ".svg") ? do
     filter (invert $ pct 100)
