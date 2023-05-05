@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    $-if(standalone-title)$
+    <title>$title$</title>
+    $-else$
+    <title>$title$ - Yoo Chung</title>
+    $-endif$
+
+    <meta charset="utf-8">
+    <meta name="author" content="Yoo Chung">
+    <meta name="generator" content="Hakyll">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    $-if(description)$
+    <meta name="description" content="$description$">
+    $-endif$
+
+    <link rel="alternate" type="application/rss+xml" href="/feed/">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/policies/">Policies</a>
+            <a href="/archives/">Archives</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <h1>$title$</h1>
+        $body$
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2008 &mdash; 2023 Yoo Chung</p>
+    </footer>
+</body>
+
+</html>

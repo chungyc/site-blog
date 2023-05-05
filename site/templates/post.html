@@ -1,0 +1,16 @@
+<article>
+    <section class="byline">
+        $-if(author)$
+        <p>By $author$.</p>
+        $-else$
+        <p>By Yoo Chung.</p>
+        $-endif$
+        <p>Published on $published$.</p>
+        $-if(updated)$
+        <p>Updated on $updated$.</p>
+        $-endif$
+    </section>
+    <section>
+        $body$
+    </section>
+</article>
