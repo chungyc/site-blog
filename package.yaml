@@ -35,6 +35,7 @@ library:
   - diagrams-core
   - diagrams-lib
   - diagrams-svg
+  - pandoc
   - random
   - svg-builder
 

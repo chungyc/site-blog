@@ -106,7 +106,7 @@ postRules = do
   match "posts/**.markdown" $ do
     route $ composeRoutes replacePrefix replaceSuffix
     compile $
-      pandocCompiler
+      postCompiler
         >>= saveSnapshot "sitemap"
         >>= saveSnapshot "posts"
         >>= loadAndApplyTemplate "templates/post.html" postContext

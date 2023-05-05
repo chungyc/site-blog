@@ -3,10 +3,11 @@
 -- Copyright: Copyright (C) 2023 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
-module Compilers (haskellCompiler) where
+module Compilers (postCompiler, haskellCompiler) where
 
 import Data.ByteString.Lazy (ByteString)
 import Hakyll
+import Text.Pandoc.Options
 
 haskellCompiler :: Compiler (Item ByteString)
 haskellCompiler = do
@@ -19,3 +20,31 @@ haskellCompiler = do
     -- We will run the code from the file directly,
     -- so we don't care about any content in an item.
     emptyItem = makeItem ""
+
+postCompiler :: Compiler (Item String)
+postCompiler = do
+  body <- getResourceBody
+  pandoc <- readPandocWith mathReaderOptions body
+  return $ writePandocWith mathWriterOptions pandoc
+
+mathReaderOptions :: ReaderOptions
+mathReaderOptions =
+  defaultHakyllReaderOptions
+    { readerExtensions =
+        readerExtensions defaultHakyllReaderOptions
+          <> extensionsFromList
+            [ Ext_tex_math_single_backslash,
+              Ext_tex_math_double_backslash,
+              Ext_tex_math_dollars,
+              Ext_latex_macros
+            ]
+    }
+
+mathWriterOptions :: WriterOptions
+mathWriterOptions =
+  defaultHakyllWriterOptions
+    { -- We use KaTeX to render math, but the auto-render extension depends
+      -- on how Pandoc writes out math in MathJax.  It does not work with
+      -- how Pandoc writes out math in KaTeX.
+      writerHTMLMathMethod = MathJax ""
+    }
