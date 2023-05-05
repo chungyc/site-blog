@@ -20,30 +20,58 @@ templateRules = match "templates/*" $ compile templateBodyCompiler
 
 serverRules :: Rules ()
 serverRules = do
-  match "server/htaccess" undefined
+  match "server/htaccess" $ do
+    route $ constRoute ".htaccess"
+    compile copyFileCompiler
 
-  match "server/robots.txt" undefined
+  match "server/robots.txt" $ do
+    route $ constRoute "robots.txt"
+    compile copyFileCompiler
 
-  match "server/favicon.png" undefined
-
-  match "server/errors/*.markdown" undefined
-
-pageRules :: Rules ()
-pageRules = do
-  create ["index.html"] $ do
+  match "server/favicon.*" $ do
     route idRoute
-    undefined
+    compile copyFileCompiler
 
-  match "about.markdown" $ do
-    route $ constRoute "about/index.html"
+  match "server/errors/*.markdown" $ do
+    route $ setExtension "html"
     compile $
       pandocCompiler
         >>= loadAndApplyTemplate defaultTemplate defaultContext
         >>= cleanupUrls
 
+pageRules :: Rules ()
+pageRules = do
+  create ["index.html"] $ do
+    route idRoute
+    compile $
+      makeItem ""
+        >>= saveSnapshot "sitemap"
+        >>= loadAndApplyTemplate defaultTemplate defaultContext
+        >>= cleanupUrls
+
+  match "about.markdown" $ do
+    route $ constRoute "about/index.html"
+    compile $
+      pandocCompiler
+        >>= saveSnapshot "sitemap"
+        >>= loadAndApplyTemplate defaultTemplate defaultContext
+        >>= cleanupUrls
+
   create ["archives/index.html"] $ do
     route idRoute
-    undefined
+    compile $ do
+      posts <- recentFirst =<< loadAllSnapshots "**" "posts"
+
+      let archiveContext =
+            mconcat
+              [ listField "posts" defaultContext (pure posts),
+                defaultContext
+              ]
+
+      makeItem ""
+        >>= loadAndApplyTemplate "templates/archive.html" archiveContext
+        >>= loadAndApplyTemplate defaultTemplate archiveContext
+        >>= cleanupUrls
 
 postRules :: Rules ()
 postRules = do
@@ -51,9 +79,10 @@ postRules = do
     route $ composeRoutes replacePrefix replaceSuffix
     compile $
       pandocCompiler
+        >>= saveSnapshot "sitemap"
         >>= saveSnapshot "posts"
-        >>= loadAndApplyTemplate defaultTemplate defaultContext
         >>= loadAndApplyTemplate "templates/post.html" defaultContext
+        >>= loadAndApplyTemplate defaultTemplate defaultContext
         >>= cleanupUrls
 
   create ["feed/index.xml"] $ do
@@ -66,10 +95,11 @@ postRules = do
                 defaultContext
               ]
       posts <- recentFirst =<< loadAllSnapshots "**" "posts"
-      renderRss feedConfiguration feedContext posts
+      renderRss feedConfiguration feedContext posts >>= cleanupUrls
   where
     replacePrefix = gsubRoute "^posts/" (const "")
     replaceSuffix = gsubRoute "\\.markdown$" (const "/index.html")
+
     feedConfiguration =
       FeedConfiguration
         { feedTitle = "Stochastic Scribbles",
@@ -83,7 +113,27 @@ sitemapRules :: Rules ()
 sitemapRules = do
   create ["sitemap.xml"] $ do
     route idRoute
-    undefined
+    compile $ do
+      itemList <- loadAllSnapshots "**" "sitemap"
+
+      let itemContext = functionField "clean" clean <> defaultContext
+
+      let sitemapContext =
+            mconcat
+              [ listField "items" itemContext (return itemList),
+                defaultContext
+              ]
+
+      makeItem "" >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapContext
+  where
+    clean [url@('/' : _)] _
+      | Nothing <- prefix = return $ root ++ url
+      | Just s <- prefix = return $ root ++ s
+      where
+        prefix = needlePrefix "index.html" url
+        root = "https://blog.chungyc.org"
+    clean [url] _ = return url
+    clean _ _ = error "wrong number of arguments"
 
 defaultTemplate :: Identifier
 defaultTemplate = "templates/default.html"
@@ -92,4 +142,9 @@ cleanupUrls :: Item String -> Compiler (Item String)
 cleanupUrls = pure . fmap (withUrls cleanupUrl)
 
 cleanupUrl :: String -> String
-cleanupUrl = undefined
+cleanupUrl url@('/' : _)
+  | Nothing <- prefix = url
+  | Just s <- prefix = s
+  where
+    prefix = needlePrefix "index.html" url
+cleanupUrl url = url

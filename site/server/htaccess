@@ -1,0 +1,23 @@
+Options -Indexes
+
+AddDefaultCharset utf-8
+
+ErrorDocument 404 /server/errors/missing.html
+
+<LocationMatch "^/feed/$">
+    DirectoryIndex index.xml
+    ForceType application/rss+xml
+</LocationMatch>
+
+RewriteEngine On
+
+# Do not allow direct access to files in /server/.
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^server/ - [R=404]
+
+# Do not allow direct access to files in /feed/.
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^feed/.+ - [R=404]
+
+# URLs should not end with index.html.
+RewriteRule ^(|.+/)index\.html$ /$1 [R=301,L]

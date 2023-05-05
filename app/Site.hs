@@ -1,7 +1,8 @@
 module Main (main) where
 
+import Config
 import Hakyll
 import Rules
 
 main :: IO ()
-main = hakyll rules
+main = hakyllWith config rules
