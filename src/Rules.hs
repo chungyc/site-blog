@@ -5,7 +5,7 @@
 -- Maintainer: web@chungyc.org
 module Rules (rules) where
 
-import Data.ByteString.Lazy (ByteString)
+import Compilers
 import Hakyll
 import Icons
 
@@ -182,18 +182,6 @@ cleanupUrl url@('/' : _)
   where
     prefix = needlePrefix "index.html" url
 cleanupUrl url = url
-
-haskellCompiler :: Compiler (Item ByteString)
-haskellCompiler = do
-  file <- getResourceFilePath
-  emptyItem >>= withItemBody (run file)
-  where
-    run f = unixFilterLBS "runhaskell" $ args ++ [f]
-    args = ["-XGHC2021", "-XOverloadedStrings"]
-
-    -- We will run the code from the file directly,
-    -- so we don't care about any content in an item.
-    emptyItem = makeItem ""
 
 postContext :: Context String
 postContext = defaultContext
