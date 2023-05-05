@@ -43,10 +43,11 @@ pageRules :: Rules ()
 pageRules = do
   create ["index.html"] $ do
     route idRoute
-    compile $
+    compile $ do
+      let frontContext = boolField "front" (const True) <> defaultContext
       makeItem ""
         >>= saveSnapshot "sitemap"
-        >>= loadAndApplyTemplate defaultTemplate defaultContext
+        >>= loadAndApplyTemplate defaultTemplate frontContext
         >>= cleanupUrls
 
   match "about.markdown" $ do
@@ -65,6 +66,7 @@ pageRules = do
       let archiveContext =
             mconcat
               [ listField "posts" defaultContext (pure posts),
+                constField "title" "Archives",
                 defaultContext
               ]
 

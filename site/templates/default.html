@@ -2,10 +2,10 @@
 <html lang="en-US">
 
 <head>
-    $-if(standalone-title)$
-    <title>$title$</title>
+    $-if(front)$
+    <title>Stochastic Scribbles</title>
     $-else$
-    <title>$title$ - Yoo Chung</title>
+    <title>$title$ - Stochastic Scribbles</title>
     $-endif$
 
     <meta charset="utf-8">
@@ -29,7 +29,7 @@
     </header>
 
     <main role="main">
-        <h1>$title$</h1>
+        <h1>$if(front)$Stochastic Scribbles$else$$title$$endif$</h1>
         $body$
     </main>
 
