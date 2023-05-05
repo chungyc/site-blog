@@ -118,7 +118,7 @@ postRules = do
     compile $ do
       let feedContext =
             mconcat
-              [ teaserField "posts" "description",
+              [ teaserField "description" "posts",
                 bodyField "description",
                 defaultContext
               ]
