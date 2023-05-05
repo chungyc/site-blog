@@ -1,13 +1,14 @@
 ---
 title: The Atheist Thirteen
-published: 2008-06-17T04:10:00Z
+published: 2008-06-17
 categories: Religion
 tags: atheism,list,meme,quiz
 ---
 
-<p>
-I'm volunteering myself to be tagged in the <a href="http://scienceblogs.com/erv/2008/06/atheist_qa.php">Atheist Thirteen gauntlet</a> via the <a href="http://scienceblogs.com/erv/">ERV</a>.  Apparently I lack the immunizations to resist certain memes ...
-</p>
+I'm volunteering myself to be tagged in the
+<a href="https://scienceblogs.com/erv/2008/06/16/atheist-qa">Atheist Thirteen gauntlet</a>
+via the <a href="https://scienceblogs.com/erv/">ERV</a>.
+Apparently I lack the immunizations to resist certain memes ...
 
 <!--more-->
 
@@ -83,12 +84,11 @@ The local person in my community who is most influential in trying to teach horr
 </ol>
 
 <p>
-And I'm naming the following three blogs that I'd like to see take up the <a href="http://www.nullifidian.net/2008/06/13/the-atheist-thirteen/">Atheist Thirteen</a> gauntlet:
+And I'm naming the following three blogs that I'd like to see take up the Atheist Thirteen gauntlet:
 </p>
 
 <ol>
-<li><a href="http://www.tetherdcow.com/">Tetherd Cow Ahead</a></li>
-<li><a href="http://wordsofwrath.blogspot.com/">Words of Wrath</a></li>
-<li><a href="http://zenoferox.blogspot.com/">Halfway There</a></li>
+<li><a href="https://www.tetherdcow.com/">Tetherd Cow Ahead</a></li>
+<li><a href="https://wordsofwrath.blogspot.com/">Words of Wrath</a></li>
+<li><a href="https://zenoferox.blogspot.com/">Halfway There</a></li>
 </ol>
-
