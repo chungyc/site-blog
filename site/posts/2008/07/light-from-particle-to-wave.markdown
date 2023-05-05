@@ -1,5 +1,5 @@
 ---
-title: Light: from particle to wave
+title: 'Light: from particle to wave'
 published: 2008-07-15T17:46:00Z
 categories: Physics
 tags: light,particle,wave

@@ -10,10 +10,10 @@ import Hakyll
 rules :: Rules ()
 rules = do
   templateRules
-  sitemapRules
   serverRules
   pageRules
   postRules
+  sitemapRules
 
 templateRules :: Rules ()
 templateRules = match "templates/*" $ compile templateBodyCompiler
@@ -60,7 +60,7 @@ pageRules = do
   create ["archives/index.html"] $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAllSnapshots "**" "posts"
+      posts <- recentFirst =<< loadAllSnapshots "posts/**" "posts"
 
       let archiveContext =
             mconcat
@@ -69,6 +69,7 @@ pageRules = do
               ]
 
       makeItem ""
+        >>= saveSnapshot "sitemap"
         >>= loadAndApplyTemplate "templates/archive.html" archiveContext
         >>= loadAndApplyTemplate defaultTemplate archiveContext
         >>= cleanupUrls
@@ -94,7 +95,7 @@ postRules = do
                 bodyField "description",
                 defaultContext
               ]
-      posts <- recentFirst =<< loadAllSnapshots "**" "posts"
+      posts <- recentFirst =<< loadAllSnapshots "posts/**" "posts"
       renderRss feedConfiguration feedContext posts >>= cleanupUrls
   where
     replacePrefix = gsubRoute "^posts/" (const "")
@@ -114,7 +115,7 @@ sitemapRules = do
   create ["sitemap.xml"] $ do
     route idRoute
     compile $ do
-      itemList <- loadAllSnapshots "**" "sitemap"
+      itemList <- loadAllSnapshots patterns "sitemap"
 
       let itemContext = functionField "clean" clean <> defaultContext
 
@@ -134,6 +135,12 @@ sitemapRules = do
         root = "https://blog.chungyc.org"
     clean [url] _ = return url
     clean _ _ = error "wrong number of arguments"
+
+    patterns =
+      "index.html"
+        .||. "about.markdown"
+        .||. "archives/index.html"
+        .||. "posts/**.markdown"
 
 defaultTemplate :: Identifier
 defaultTemplate = "templates/default.html"

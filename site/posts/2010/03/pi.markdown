@@ -1,5 +1,5 @@
 ---
-title: &pi;
+title: '&pi;'
 published: 2010-03-14T23:04:54Z
 categories: Math
 tags: Pi

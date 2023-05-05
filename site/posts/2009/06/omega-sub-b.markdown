@@ -1,5 +1,5 @@
 ---
-title: A new baryon: &Omega;<sub>b</sub>
+title: 'A new baryon: &Omega;<sub>b</sub>'
 published: 2009-06-30T06:25:15Z
 categories: Physics
 tags: baryon,Fermilab

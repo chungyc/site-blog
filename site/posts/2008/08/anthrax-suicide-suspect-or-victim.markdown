@@ -1,5 +1,5 @@
 ---
-title: Anthrax suicide: suspect or victim?
+title: 'Anthrax suicide: suspect or victim?'
 published: 2008-08-01T09:41:00Z
 categories: Politics
 tags: anthrax,death,terrorism

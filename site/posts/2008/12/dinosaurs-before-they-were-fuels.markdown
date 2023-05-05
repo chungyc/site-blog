@@ -1,5 +1,5 @@
 ---
-title: Dinosaurs: Before They Were Fuels
+title: 'Dinosaurs: Before They Were Fuels'
 published: 2008-12-06T06:19:59Z
 categories: Podcast
 tags: dinosaur,news

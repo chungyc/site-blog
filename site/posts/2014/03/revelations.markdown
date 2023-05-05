@@ -1,5 +1,5 @@
 ---
-title: "Revelations" costing tech companies?
+title: '"Revelations" costing tech companies?'
 published: 2014-03-25T03:22:47Z
 categories: Politics
 tags: NSA
