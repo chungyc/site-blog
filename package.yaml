@@ -43,6 +43,7 @@ executables:
     dependencies:
     - blog
     - hakyll
+    - clay
 
     # Work around https://github.com/sol/hpack/issues/303.
     when:

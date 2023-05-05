@@ -11,6 +11,7 @@ rules :: Rules ()
 rules = do
   templateRules
   serverRules
+  styleRules
   pageRules
   postRules
   sitemapRules
@@ -38,6 +39,16 @@ serverRules = do
       pandocCompiler
         >>= loadAndApplyTemplate defaultTemplate defaultContext
         >>= cleanupUrls
+
+styleRules :: Rules ()
+styleRules = do
+  match "styles/**.css" $ do
+    route idRoute
+    compile compressCssCompiler
+
+  match "styles/**.hs" $ do
+    route $ setExtension "css"
+    compile haskellCompiler
 
 pageRules :: Rules ()
 pageRules = do
@@ -157,3 +168,15 @@ cleanupUrl url@('/' : _)
   where
     prefix = needlePrefix "index.html" url
 cleanupUrl url = url
+
+haskellCompiler :: Compiler (Item String)
+haskellCompiler = do
+  file <- getResourceFilePath
+  emptyItem >>= withItemBody (run file)
+  where
+    run f = unixFilter "runhaskell" $ f : args
+    args = ["-XGHC2021", "-XOverloadedStrings"]
+
+    -- We will run the code from the file directly,
+    -- so we don't care about any content in an item.
+    emptyItem = makeItem ""
