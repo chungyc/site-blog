@@ -77,6 +77,7 @@ pageRules = do
       let archiveContext =
             mconcat
               [ listField "posts" defaultContext (pure posts),
+                constField "description" "Random musings in a variety of subjects, from science to religion.",
                 constField "title" "Archives",
                 defaultContext
               ]
@@ -174,7 +175,7 @@ haskellCompiler = do
   file <- getResourceFilePath
   emptyItem >>= withItemBody (run file)
   where
-    run f = unixFilter "runhaskell" $ f : args
+    run f = unixFilter "runhaskell" $ args ++ [f]
     args = ["-XGHC2021", "-XOverloadedStrings"]
 
     -- We will run the code from the file directly,

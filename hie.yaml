@@ -1,0 +1,24 @@
+# Needs a custom configuration because Stack and Cabal would not know
+# what to do with Haskell code in the site/ directory.
+
+cradle:
+  multi:
+    - path: "./site"
+      config:
+        cradle:
+          stack:
+          - path: "./site"
+            component: "blog:exe:site"
+
+    - path: "./"
+      config:
+        cradle:
+          stack:
+          - path: "./src"
+            component: "blog:lib"
+          - path: "./app"
+            component: "blog:exe:site"
+
+dependencies:
+  - package.yaml
+  - stack.yaml

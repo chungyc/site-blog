@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-US">
 
-<head>
+  <head>
     $-if(front)$
     <title>Stochastic Scribbles</title>
     $-else$
@@ -16,27 +16,32 @@
     <meta name="description" content="$description$">
     $-endif$
 
+    <link rel="stylesheet" href="/styles/default.css">
     <link rel="alternate" type="application/rss+xml" href="/feed/">
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>$if(front)$Stochastic Scribbles$else$$title$$endif$</h1>
-        <p>Random musings on random topics from Yoo Chung.</p>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about/">About</a>
-            <a href="/archives/">Archives</a>
-        </nav>
+      <div class="site-title">Stochastic Scribbles</div>
+      <div class="slogan">Random musings in a variety of subjects, from science to religion.</div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/archives/">Archives</a>
+      </nav>
     </header>
 
     <main role="main">
-        $body$
+      $-if(front)$
+      $-else$
+      <h1>$title$</h1>
+      $-endif$
+      $body$
     </main>
 
     <footer>
-        <p>Copyright &copy; 2008-2023 Yoo Chung</p>
+      <p>Copyright &copy; 2008-2023 Yoo Chung</p>
     </footer>
-</body>
+  </body>
 
 </html>
