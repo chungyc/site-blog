@@ -18,7 +18,7 @@ generateIcon = makeItem . renderBS . renderDia SVG options . pad 1.1
     options = SVGOptions (mkWidth 256) Nothing "" [] True
 
 favicon :: Diagram B
-favicon = cubicSpline True points # lineColor slateblue
+favicon = cubicSpline True points # lineColor steelblue
   where
     points = take 100 $ zipWith (curry p2) xs ys
     xs = randomRs (-1, 1) $ mkStdGen 3247823487
