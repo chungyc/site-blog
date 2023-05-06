@@ -33,7 +33,7 @@ serverRules = do
 
   create ["favicon.svg"] $ do
     route idRoute
-    compile $ generateIcon favicon
+    compile $ makeItem $ generateSvg favicon
 
   match "server/errors/*.markdown" $ do
     route $ setExtension "html"
