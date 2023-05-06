@@ -1,6 +1,23 @@
-<ul>
-$for(posts)$
-<li><a href="$url$">$title$</a> - $published$</li>  
-$endfor$
-<li>More posts are in the <a href="/archives/">archives</a>.</li>
-</ul>
+$-for(posts)$
+<article class="summary">
+  <h2><a href="$url$">$title$</a></h2>
+  <section class="byline">
+    $-if(author)$
+    <p>By $author$.</p>
+    $-endif$
+    <p>Published on $published$.</p>
+  </section>
+  <section>
+    $-if(teaser)$
+    $-teaser$
+    <p><em><a href="$url$">(more...)</a></em></p>
+    $-else$
+    $-body$
+    $-endif$
+  </section>
+</article>
+$-endfor$
+
+<p>
+  More posts are in the <a href="/archives/">archives</a>.
+</p>

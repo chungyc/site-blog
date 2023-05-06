@@ -57,7 +57,7 @@ pageRules = do
   create ["index.html"] $ do
     route idRoute
     compile $ do
-      posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
+      posts <- fmap (take 5) . recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
 
       let frontContext =
             mconcat
@@ -188,4 +188,4 @@ cleanupUrl url@('/' : _)
 cleanupUrl url = url
 
 postContext :: Context String
-postContext = defaultContext
+postContext = teaserField "teaser" "posts" <> defaultContext

@@ -107,6 +107,11 @@ postStyle = do
       marginTop $ em 0.2
       marginBottom $ em 0.2
 
+  article # ".summary" ? do
+    sym margin $ em 1
+    sym2 padding (em 0) (em 2)
+    border (px 1) solid lightgrey
+
 figures :: Css
 figures = do
   figure ? do
@@ -202,6 +207,10 @@ darkColorScheme = do
 
   footer ? do
     fontColor $ rgb 187 219 250
+
+  article # ".summary" ? do
+    sym margin $ em 1
+    sym padding $ em 1
 
   blockquote ? do
     backgroundColor $ rgb 30 30 30
