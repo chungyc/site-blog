@@ -1,25 +1,76 @@
 ---
 title: Sound in space
-published: 2008-10-26T05:14:00Z
+published: 2008-10-26
+updated: 2023-05-06
 categories: Astronomy
 tags: sound,vacuum
 ---
 
-A lot of people may not know if there is actually sound in space or not.  But among those in the know, it is a common belief that there is no sound in space.  While this is true to the extent that it's unrealistic to hear all the sounds during a space battle you see in movies or on television, it is not quite true in the most strictest of senses.  There <em>is</em> gas in space, albeit at such low densities and pressures that it would be essentially the same as a vacuum to life forms such as us, who are used to comparatively high-pressure atmospheres.  And where there is gas, there can be sound.
+A lot of people may not know if there is actually sound in space or not.  But among those
+in the know, it is a common belief that there is no sound in space.  While this is true to
+the extent that it's unrealistic to hear all the sounds during a space battle you see in
+movies or on television, it is not quite true in the most strictest of senses.  There
+<em>is</em> gas in space, albeit at such low densities and pressures that it would be
+essentially the same as a vacuum to life forms such as us, who are used to comparatively
+high-pressure atmospheres.  And where there is gas, there can be sound.
 
 <!--more-->
 
-But it's no sound that we will ever be able to hear with our own ears.  Compared to the <a href="http://www.ux1.eiu.edu/~cfjps/1400/atmos_struct.html">incredibly dense atmosphere</a> of our own planet, with about 10<sup>19</sup> molecules per cubic centimeter, <a href="http://en.wikipedia.org/wiki/Vacuum#Examples">space is incredibly sparse</a>.  There are only about 10<sup>6</sup> molecules per cubic centimeter a thousand kilometers up in the sky, while interplanetary space has only about 10 molecules per cubic centimeter.  And interstellar space has only a tiny number of about one molecule per cubic centimeter.  There would simply not be enough molecules hitting our ears for us to detect any vibrations.
+But it's no sound that we will ever be able to hear with our own ears.  Compared to the <a
+href="https://www.ux1.eiu.edu/~cfjps/1400/atmos_struct.html">incredibly dense
+atmosphere</a> of our own planet, with about 10<sup>19</sup> molecules per cubic
+centimeter, <a href="https://en.wikipedia.org/wiki/Vacuum#Examples">space is incredibly
+sparse</a>.  There are only about 10<sup>6</sup> molecules per cubic centimeter a thousand
+kilometers up in the sky, while interplanetary space has only about 10 molecules per cubic
+centimeter.  And interstellar space has only a tiny number of about one molecule per cubic
+centimeter.  There would simply not be enough molecules hitting our ears for us to detect
+any vibrations.
 
-<a href="http://blog.chungyc.org/2008/10/sound-in-space/huge-microphone/" rel="attachment wp-att-947"><img src="http://blog.chungyc.org/wp-content/uploads/2008/10/huge-microphone.png" alt="Gigantic microphone against Earth" width="169" height="112" class="alignright size-medium wp-image-947" /></a>
+<!--
+Gignormous microphone trying to listen to sounds from a thousand kilometers above Earth.
+Derived from an image from the Wikimedia Commons and
+also licensed under the GNU General Public License 3.0.
+https://commons.wikimedia.org/wiki/File:Exquisite-microphone.png
+-->
+![Huge microphone against the Earth](huge-microphone.png)
 
-What kind of microphone would we actually need to detect sounds in space?  Assuming that the required size of a microphone only depends on the number of molecules in the medium, we could make a rough estimate of how big it would need to be.  If it's given that a 1cm microphone suffices in our own atmosphere, we would then need a 10<sup>11</sup>m microphone to detect sound about a thousand kilometers in the sky.  That's about the distance from the Sun to the Earth!  And it's even worse in interplanetary and interstellar space: interplanetary space would require a 10<sup>16</sup>m microphone, while interstellar space would require a 10<sup>17</sup>m one.  That's like one to ten light years!
+What kind of microphone would we actually need to detect sounds in space?  Assuming that
+the required size of a microphone only depends on the number of molecules in the medium,
+we could make a rough estimate of how big it would need to be.  If it's given that a 1cm
+microphone suffices in our own atmosphere, we would then need a 10<sup>11</sup>m
+microphone to detect sound about a thousand kilometers in the sky.  That's about the
+distance from the Sun to the Earth!  And it's even worse in interplanetary and
+interstellar space: interplanetary space would require a 10<sup>16</sup>m microphone,
+while interstellar space would require a 10<sup>17</sup>m one.  That's like one to ten
+light years!
 
-These sizes are based on totally unrealistic assumptions such as the same techniques being used to construct microphones at all scales and the surrounding gas all having the same temperature or composition, but at least it gives an order of magnitude sense of how difficult detecting sound in space would be.  Conversely, by the same reasoning we can figure out that <em>generating</em> any sound worth a damn would require enormous speakers.  Given how tenuous such sounds would be, it might be tempting to consider them irrelevant and pretend that there is absolutely no sound in space.  But the fact that there is sound in space has real consequences that we can observe in the sky.
+These sizes are based on totally unrealistic assumptions such as the same techniques being
+used to construct microphones at all scales and the surrounding gas all having the same
+temperature or composition, but at least it gives an order of magnitude sense of how
+difficult detecting sound in space would be.  Conversely, by the same reasoning we can
+figure out that <em>generating</em> any sound worth a damn would require enormous
+speakers.  Given how tenuous such sounds would be, it might be tempting to consider them
+irrelevant and pretend that there is absolutely no sound in space.  But the fact that
+there is sound in space has real consequences that we can observe in the sky.
 
-[caption id="" align="aligncenter" width="516" caption="Trail of supersonic Mira"]<a href="http://www.nasa.gov/mission_pages/galex/galex-20070815.html"><img alt="Trail of supersonic Mira" src="http://www.nasa.gov/images/content/185517main_a-516.jpg" width="516" height="129" /></a>[/caption]
+![Trail of supersonic Mira; from [NASA](https://www.nasa.gov/mission_pages/galex/galex-20070815.html)](supersonic-mira.jpg)
 
-One vivid example is the <a href="http://www.nasa.gov/mission_pages/galex/galex-20070815.html">trail of the supersonic star Mira</a> that GALEX observed.  We also see bow shocks as <a href="http://en.wikipedia.org/wiki/Runaway_star">runaway stars</a> travel at supersonic speeds through the interstellar medium.  Considering that the speed of sound is typically much higher in space than in our atmosphere, these stars are moving <em>really</em> fast.  We can also observe <a href="http://science.nasa.gov/headlines/y2003/09sep_blackholesounds.htm">sound waves generated by black holes</a>, which can <a href="http://www.universetoday.com/2006/10/06/black-hole-stops-star-formation-in-elliptical-galaxy/">influence star formation</a>.  Other types of sounds in space generated by astronomical phenomenon could also play a role in star formation.
+One vivid example is the <a
+href="https://www.nasa.gov/mission_pages/galex/galex-20070815.html">trail of the
+supersonic star Mira</a> that GALEX observed.  We also see bow shocks as <a
+href="https://en.wikipedia.org/wiki/Stellar_kinematics#Runaway_stars">runaway stars</a>
+travel at supersonic speeds through the interstellar medium.  Considering that the speed
+of sound is typically much higher in space than in our atmosphere, these stars are moving
+<em>really</em> fast.  We can also observe <a
+href="https://www.nasa.gov/mission_pages/chandra/news/new-nasa-black-hole-sonifications-with-a-remix.html">sound waves generated by black holes</a>, which can <a
+href="https://www.universetoday.com/750/black-hole-stops-star-formation-in-elliptical-galaxy/">influence star formation</a>.
+Other types of sounds in space generated by astronomical phenomenon could also play a role
+in star formation.
 
-So the next time you hear sounds in space when watching movies or television, not only could you smugly point out that there's no way we could hear sounds in space, you could also break your friends' minds by pointing out that, contrary to what you just said, there <em>are</em> sounds in space.  And enjoy the mind-numbing as you try to explain the size of the speakers and microphones that would be required in space.  Not to mention that you'll finally know what astronomers are talking about when they mention stars and stuff moving at supersonic speeds.
-
+So the next time you hear sounds in space when watching movies or television, not only
+could you smugly point out that there's no way we could hear sounds in space, you could
+also break your friends' minds by pointing out that, contrary to what you just said, there
+<em>are</em> sounds in space.  And enjoy the mind-numbing as you try to explain the size
+of the speakers and microphones that would be required in space.  Not to mention that
+you'll finally know what astronomers are talking about when they mention stars and stuff
+moving at supersonic speeds.
