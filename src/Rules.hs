@@ -57,7 +57,7 @@ pageRules = do
   create ["index.html"] $ do
     route idRoute
     compile $ do
-      posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/**" "posts"
+      posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
 
       let frontContext =
             mconcat
@@ -85,7 +85,7 @@ pageRules = do
   create ["archives/index.html"] $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAllSnapshots "posts/**" "posts"
+      posts <- recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
 
       let archiveContext =
             mconcat
@@ -104,7 +104,7 @@ pageRules = do
 postRules :: Rules ()
 postRules = do
   match "posts/**.markdown" $ do
-    route $ composeRoutes replacePrefix replaceSuffix
+    route $ composeRoutes stripPrefix replaceSuffix
     compile $
       postCompiler
         >>= saveSnapshot "sitemap"
@@ -112,6 +112,10 @@ postRules = do
         >>= loadAndApplyTemplate "templates/post.html" postContext
         >>= loadAndApplyTemplate defaultTemplate postContext
         >>= cleanupUrls
+
+  match "posts/**.png" $ do
+    route stripPrefix
+    compile copyFileCompiler
 
   create ["feed/index.xml"] $ do
     route idRoute
@@ -122,10 +126,10 @@ postRules = do
                 bodyField "description",
                 defaultContext
               ]
-      posts <- recentFirst =<< loadAllSnapshots "posts/**" "posts"
+      posts <- recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
       renderRss feedConfiguration feedContext posts >>= cleanupUrls
   where
-    replacePrefix = gsubRoute "^posts/" (const "")
+    stripPrefix = gsubRoute "^posts/" (const "")
     replaceSuffix = gsubRoute "\\.markdown$" (const "/index.html")
 
     feedConfiguration =
