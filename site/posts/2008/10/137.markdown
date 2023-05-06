@@ -90,14 +90,14 @@ constructed a [theoretical model](https://en.wikipedia.org/wiki/Bohr_model)
 that successfully predicted the coarse spectral lines of the hydrogen atom.
 His model was based on electrons only being able to have discrete orbits around a central proton.
 
-![Hydrogen spectral lines](http://blog.chungyc.org/wp-content/uploads/2008/10/broad-spectrum.png)
+![Hydrogen spectral lines](broad-spectrum.png)
 
 However, a very close look at the hydrogen spectral lines showed
 that Bohr's model didn't _quite_ get everything right.
 By magnifying the above spectrum over a thousand times,
 we can see that the red spectral line is actually _two_ spectral lines spaced very close together.
 
-![Fine structure of hydrogen spectral lines](http://blog.chungyc.org/wp-content/uploads/2008/10/fine-structure.png)
+![Fine structure of hydrogen spectral lines](fine-structure.png)
 
 This is where the fine-structure constant \(\alpha\) comes in.
 [Arnold Sommerfeld](https://en.wikipedia.org/wiki/Arnold_Sommerfeld) managed
