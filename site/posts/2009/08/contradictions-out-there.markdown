@@ -1,6 +1,6 @@
 ---
 title: Contradictions out there
-published: 2009-08-11T08:04:22Z
+published: 2009-08-11
 categories: Politics
 tags: contradictions,list
 ---
@@ -19,4 +19,3 @@ It's no surprise that politics make people say contradictory things in the same 
 <li>We need Hispanic votes.  I will vote against a Hispanic candidate because I have to blow out a minor comment all out of proportion.<!-- John McCain --></li>
 <li>Why does he not show his birth certificate (which he already did last year) to me (whose birth certificate the public has never seen)?<!-- almost every birther and their sympathizers --></li>
 </ol>
-
