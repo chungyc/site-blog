@@ -112,6 +112,10 @@ postStyle = do
     sym2 padding (em 0) (em 2)
     border (px 1) solid lightgrey
 
+  div # ".embedded-video" ? do
+    textAlign center
+    maxWidth $ pct 100
+
 figures :: Css
 figures = do
   figure ? do
