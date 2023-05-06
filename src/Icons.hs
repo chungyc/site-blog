@@ -6,11 +6,11 @@
 module Icons (generateSvg, favicon) where
 
 import Data.ByteString.Lazy (ByteString)
+import Data.Char (ord)
 import Diagrams.Backend.SVG
 import Diagrams.Prelude
 import Graphics.Svg
 import System.Random
-import Data.Char (ord)
 
 generateSvg :: Diagram B -> ByteString
 generateSvg = renderBS . renderDia SVG options . pad 1.1
@@ -27,4 +27,4 @@ favicon = cubicSpline True points # lineColor steelblue
 
 toIntSeed :: String -> Int
 toIntSeed [] = 0
-toIntSeed (c:cs) = ord c + 91 * toIntSeed cs
+toIntSeed (c : cs) = ord c + 91 * toIntSeed cs
