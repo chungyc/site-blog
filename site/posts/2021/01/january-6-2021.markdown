@@ -1,6 +1,6 @@
 ---
 title: January 6, 2021
-published: 2021-01-07T13:39:17Z
+published: 2021-01-07
 categories: Politics
 tags: insurrection
 ---
