@@ -117,6 +117,10 @@ postRules = do
     route stripPrefix
     compile copyFileCompiler
 
+  match "posts/**.jpg" $ do
+    route stripPrefix
+    compile copyFileCompiler
+
   create ["feed/index.xml"] $ do
     route idRoute
     compile $ do
