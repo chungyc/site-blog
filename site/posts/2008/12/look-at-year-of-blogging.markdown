@@ -1,11 +1,16 @@
 ---
 title: A look at a year of blogging
-published: 2008-12-27T07:02:55Z
+published: 2008-12-27
 categories: Blog
-tags: 
 ---
 
-With the end of the first year that I have begun blogging on <a href="http://blog.chungyc.org/">Stochastic Scribbles</a>, this seems to be a good time to take a retrospective look at what I wrote about and list the more major posts.  Given my interest in science, it's no surprise that a lot of the articles are about astronomy and physics.  A lot of them were about spacecraft or astronomical discoveries in the news, but there were also a few introductory science articles on things that I found interesting or had wondered about.
+With the end of the first year that I have begun blogging on <a
+href="https://blog.chungyc.org/">Stochastic Scribbles</a>, this seems to be a good time to
+take a retrospective look at what I wrote about and list the more major posts.  Given my
+interest in science, it's no surprise that a lot of the articles are about astronomy and
+physics.  A lot of them were about spacecraft or astronomical discoveries in the news, but
+there were also a few introductory science articles on things that I found interesting or
+had wondered about.
 
 <!--more-->
 
@@ -49,7 +54,7 @@ On the other hand, I also wrote quite a bit about political matters.  I always t
 <dd>Why blanket condemnation of capitalism annoys me.</dd>
 </dl>
 
-Given that I'm a laid-back atheist, I usually don't talk much about religion, but that doesn't mean I don't write about the topic at all. 
+Given that I'm a laid-back atheist, I usually don't talk much about religion, but that doesn't mean I don't write about the topic at all.
 
 <dl>
 <dt><a href="/2008/07/god-of-the-gaps/">God of the gaps</a></dt>
@@ -61,13 +66,12 @@ Given that I'm a laid-back atheist, I usually don't talk much about religion, bu
 However, I still have open questions about some of the stuff I wrote about during the year.  I might never know the answer to some of these questions ...
 
 <ul>
-<li>Is <a href="/2008/09/dark-flow-of-the-universe/">dark flow</a> real, and if so, what might be its cause?</li>
-<li>Where was the water when <a href="/2008/09/mystery-of-the-missing-water/">a fork was stuck in Mars</a>?</li>
-<li>What's behind the <a href="/2008/10/mystery-of-comet-holmes/">flare-ups of Comet Holmes</a>?</li>
+<li>Is dark flow real, and if so, what might be its cause?</li>
+<li>Where was the water when a fork was stuck in Mars?</li>
+<li>What's behind the flare-ups of Comet Holmes?</li>
 <li>What's the source of the <a href="/2008/11/replenishing-methane-on-mars/">methane hotspots on Mars</a>?</li>
 <li>I still haven't seen slam-dunk evidence, or even a particularly strong collection of weak evidence, for the <a href="/2008/09/apparent-flimsiness-of-anthrax-case/">accusations against Dr. Bruce Ivins</a>.</li>
-<li>What is the real story behind the <a href="/2008/07/tourist-murdered-by-north-korea/">killing of a South Korean tourist by North Korea</a>?</li>
+<li>What is the real story behind the killing of a South Korean tourist by North Korea?</li>
 </ul>
 
 Here's hoping for another year of fruitful blogging, and have a Happy New Year!
-
