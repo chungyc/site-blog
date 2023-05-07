@@ -1,15 +1,32 @@
 ---
 title: Diamonds from the sky, death on the ground
-published: 2009-01-03T02:12:34Z
+published: 2009-01-03
 categories: Astronomy,Science
 tags: diamonds,extinction,meteorite
 ---
 
-[caption id="attachment_1537" align="alignright" width="200" caption="Layer of sediment with nanometer sized diamond"]<a href="http://pmr.uoregon.edu/science-and-innovation/uo-research-news/research-news-2009/january/six-north-american-sites-hold-12-900-year-old-nanodiamond-rich-soil/"><img src="http://blog.chungyc.org/wp-content/uploads/2009/01/sediment-200x133.jpg" alt="Layer of sediment with nanometer sized diamonds" width="200" height="133" class="size-medium wp-image-1537" /></a>[/caption]
+<a
+href="https://www.sfgate.com/news/article/Gems-show-comet-hit-continent-scientists-say-3255911.php">Diamond
+dust has been found</a> in sediments across North America from 13,000 years ago.  It's not
+much of a find in terms of riches: rather, it's an indication of what may have happened
+13,000 years ago.  This is about the time that many large animals went extinct and the <a
+href="https://en.wikipedia.org/wiki/Clovis_culture">Clovis people</a> declined, along with
+a start of a 1,300 year long ice age.
 
-<a href="http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2009/01/02/MNFC152KLC.DTL">Diamond dust has been found</a> in sediments across North America from 13,000 years ago.  It's not much of a find in terms of riches: rather, it's an indication of what may have happened 13,000 years ago.  This is about the time that many large animals went extinct and the <a href="http://en.wikipedia.org/wiki/Clovis_culture">Clovis people</a> declined, along with a start of a 1,300 year long ice age.
+![Layer of sediment with nanometer sized diamonds; from University of Oregon](sediment.jpg)
 
-The discovery of diamond dust lends support to the theory that there may have been a comet that hit North America 13,000 years ago and caused widespread devastation.  Diamond is merely carbon arranged in a certain crystalline lattice formed by high temperatures and pressures.  For diamond dust to be found in a single layer of sediment, the most likely explanation is that the impact of a carbon-rich comet compressed carbon into diamonds.  The presence of elements such as iridium in the same layer of sediment is another piece of evidence supporting the comet impact theory.
+<!--more-->
 
-Some scientists are skeptical about the evidence supporting the comet impact theory, however, so it still might be the case that the mass extinctions 13,000 years ago were purely due to terrestrial causes.  Still, it doesn't stop me from worrying time to time about <a href="http://www.theatlantic.com/doc/200806/asteroids">a comet wreaking terrible havoc</a> on our puny human civilization.
+The discovery of diamond dust lends support to the theory that there may have been a comet
+that hit North America 13,000 years ago and caused widespread devastation.  Diamond is
+merely carbon arranged in a certain crystalline lattice formed by high temperatures and
+pressures.  For diamond dust to be found in a single layer of sediment, the most likely
+explanation is that the impact of a carbon-rich comet compressed carbon into diamonds.
+The presence of elements such as iridium in the same layer of sediment is another piece of
+evidence supporting the comet impact theory.
 
+Some scientists are skeptical about the evidence supporting the comet impact theory,
+however, so it still might be the case that the mass extinctions 13,000 years ago were
+purely due to terrestrial causes.  Still, it doesn't stop me from worrying time to time
+about <a href="https://www.theatlantic.com/magazine/archive/2008/06/the-sky-is-falling/306807/">a comet wreaking terrible
+havoc</a> on our puny human civilization.

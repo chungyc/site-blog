@@ -1,6 +1,6 @@
 ---
 title: A New Year
-published: 2009-01-01T00:00:29Z
+published: 2009-01-01
 categories: Astronomy,Politics
 tags: George Bush,International Year of Astronomy,New Year
 ---
