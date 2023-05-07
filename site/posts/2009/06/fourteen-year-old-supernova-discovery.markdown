@@ -1,6 +1,6 @@
 ---
 title: Fourteen year old supernova discovery
-published: 2009-06-11T01:08:13Z
+published: 2009-06-11
 categories: Astronomy
 tags: supernova
 ---
