@@ -27,6 +27,10 @@ serverRules = do
     route $ constRoute ".htaccess"
     compile copyFileCompiler
 
+  match "server/feed/htaccess" $ do
+    route $ constRoute "feed/.htaccess"
+    compile copyFileCompiler
+
   match "server/robots.txt" $ do
     route $ constRoute "robots.txt"
     compile copyFileCompiler
