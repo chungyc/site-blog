@@ -8,4 +8,20 @@ module Config (config) where
 import Hakyll
 
 config :: Configuration
-config = defaultConfiguration {providerDirectory = "site"}
+config =
+  defaultConfiguration
+    { providerDirectory = "site",
+      deployCommand =
+        unwords
+          [ "rsync",
+            "--checksum",
+            "--compress",
+            "--delete",
+            "--exclude .well-known",
+            "--links",
+            "--recursive",
+            "--verbose",
+            "_site/",
+            "chungyc@chungyc.org:blog.chungyc.org/"
+          ]
+    }
