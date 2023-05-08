@@ -110,7 +110,7 @@ postStyle = do
   article # ".summary" ? do
     sym margin $ em 1
     sym2 padding (em 0) (em 2)
-    border (px 1) solid lightgrey
+    border (em 0.5) inset lightgrey
 
   div # ".embedded-video" ? do
     textAlign center
@@ -199,8 +199,6 @@ darkColorScheme = do
     color white
     backgroundColor black
 
-  footer ? borderTop (px 1) solid white
-
   a # link ? color cyan
   a # visited ? color pink
 
@@ -209,8 +207,13 @@ darkColorScheme = do
   header |> (div # ".site-title" <> div # ".slogan") ? do
     fontColor $ rgb 187 219 250
 
+  header |> nav ? do
+    borderTop (px 1) solid white
+
   footer ? do
     fontColor $ rgb 187 219 250
+
+  footer ? borderTop (px 1) solid white
 
   article # ".summary" ? do
     sym margin $ em 1
