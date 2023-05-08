@@ -105,6 +105,14 @@ pageRules = do
         >>= loadAndApplyTemplate defaultTemplate archiveContext
         >>= cleanupUrls
 
+  match "contact.markdown" $ do
+    route $ constRoute "contact/index.html"
+    compile $
+      pandocCompiler
+        >>= saveSnapshot "sitemap"
+        >>= loadAndApplyTemplate defaultTemplate defaultContext
+        >>= cleanupUrls
+
 postRules :: Rules ()
 postRules = do
   match "posts/**.markdown" $ do
