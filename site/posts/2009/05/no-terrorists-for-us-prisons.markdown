@@ -5,7 +5,7 @@ categories: Politics
 tags: prison,sarcasm,terrorism
 ---
 
-Senate Democrats have promised to prevent detainees in the GuantÃ¡namo Bay facility from
+Senate Democrats have promised to prevent detainees in the Guantanamo Bay facility from
 being transferred to prisons within the US.  The ostensible reason is that they do not
 want the detainees to be released within the United States, which is patently ridiculous
 on its face: there is no way they could confuse transfer of prisoners to another detention
