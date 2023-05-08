@@ -1,7 +1,7 @@
 ---
 title: About
 published: 2008-09-03
-updated: 2023-05-05
+updated: 2023-05-08
 ---
 
 Stochastic Scribbles is a blog maintained by [Yoo Chung](https://chungyc.org/),
