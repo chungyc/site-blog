@@ -124,9 +124,16 @@ postRules = do
   create ["feed/index.xml"] $ do
     route idRoute
     compile $ do
+      let toCleanLink item = do
+            path <- getRoute (itemIdentifier item)
+            case path of
+              Nothing -> noResult "no route for identifier"
+              Just s -> pure . cleanupUrl . toUrl $ s
+
       let feedContext =
             mconcat
-              [ teaserField "description" "posts",
+              [ field "url" toCleanLink,
+                teaserField "description" "posts",
                 bodyField "description",
                 defaultContext
               ]
