@@ -9,6 +9,7 @@ import Data.ByteString.Lazy (ByteString)
 import Hakyll
 import Text.Pandoc.Options
 
+-- | Runs the Haskell code in the underlying file and uses its output.
 haskellCompiler :: Compiler (Item ByteString)
 haskellCompiler = do
   file <- getResourceFilePath
@@ -21,6 +22,7 @@ haskellCompiler = do
     -- so we don't care about any content in an item.
     emptyItem = makeItem ""
 
+-- | Compiler for a blog post.
 postCompiler :: Compiler (Item String)
 postCompiler = do
   body <- getResourceBody

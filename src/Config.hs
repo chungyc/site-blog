@@ -7,6 +7,7 @@ module Config (config) where
 
 import Hakyll
 
+-- | Hakyll configuration for generating the blog.
 config :: Configuration
 config =
   defaultConfiguration

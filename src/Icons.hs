@@ -12,11 +12,17 @@ import Diagrams.Prelude
 import Graphics.Svg
 import System.Random
 
+-- | Returns the SVG version of the given diagram.
+--
+-- >>> generateSVG favicon
 generateSvg :: Diagram B -> ByteString
 generateSvg = renderBS . renderDia SVG options . pad 1.1
   where
     options = SVGOptions (mkWidth 256) Nothing "" [] True
 
+-- | The favicon for the blog.
+--
+-- It is a random scribble generated based on its name.
 favicon :: Diagram B
 favicon = cubicSpline True points # lineColor steelblue
   where
@@ -25,6 +31,7 @@ favicon = cubicSpline True points # lineColor steelblue
     ys = randomDoubles "Scribbles"
     randomDoubles = randomRs (-1.0, 1.0) . mkStdGen . toIntSeed
 
+-- | Converts a string to an integer seed.
 toIntSeed :: String -> Int
 toIntSeed [] = 0
 toIntSeed (c : cs) = ord c + 91 * toIntSeed cs

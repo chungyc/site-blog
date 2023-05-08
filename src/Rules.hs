@@ -18,9 +18,13 @@ rules = do
   postRules
   sitemapRules
 
+-- | Rules for loading templates.
 templateRules :: Rules ()
 templateRules = match "templates/*" $ compile templateBodyCompiler
 
+-- | Rules for generating server configuration.
+--
+-- E.g., Apache configuration, favicon, etc.
 serverRules :: Rules ()
 serverRules = do
   match "server/htaccess" $ do
@@ -46,6 +50,7 @@ serverRules = do
         >>= loadAndApplyTemplate defaultTemplate defaultContext
         >>= cleanupUrls
 
+-- | Rules for generating the stylesheets for the blog.
 styleRules :: Rules ()
 styleRules = do
   match "styles/**.css" $ do
@@ -56,6 +61,7 @@ styleRules = do
     route $ setExtension "css"
     compile haskellCompiler
 
+-- | Rules for generating the non-post pages for the blog.
 pageRules :: Rules ()
 pageRules = do
   create ["index.html"] $ do
@@ -113,6 +119,7 @@ pageRules = do
         >>= loadAndApplyTemplate defaultTemplate defaultContext
         >>= cleanupUrls
 
+-- | Rules for generating the blog posts.
 postRules :: Rules ()
 postRules = do
   match "posts/**.markdown" $ do
@@ -136,6 +143,7 @@ postRules = do
   create ["feed/index.xml"] $ do
     route idRoute
     compile $ do
+      -- Used to strip "index.html" from the URLs.
       let toCleanLink item = do
             path <- getRoute (itemIdentifier item)
             case path of
@@ -164,6 +172,7 @@ postRules = do
           feedRoot = "https://blog.chungyc.org"
         }
 
+-- | Rules for generating the sitemap.
 sitemapRules :: Rules ()
 sitemapRules = do
   create ["sitemap.xml"] $ do
@@ -196,12 +205,15 @@ sitemapRules = do
         .||. "archives/index.html"
         .||. "posts/**.markdown"
 
+-- | Default templates for HTML pages.
 defaultTemplate :: Identifier
 defaultTemplate = "templates/default.html"
 
+-- | Clean up "index.html" from URLs in HTML items.
 cleanupUrls :: Item String -> Compiler (Item String)
 cleanupUrls = pure . fmap (withUrls cleanupUrl)
 
+-- | Clean up "index.html" from a given local URL.
 cleanupUrl :: String -> String
 cleanupUrl url@('/' : _)
   | Nothing <- prefix = url
@@ -210,5 +222,6 @@ cleanupUrl url@('/' : _)
     prefix = needlePrefix "index.html" url
 cleanupUrl url = url
 
+-- | Context to be used for blog posts.
 postContext :: Context String
 postContext = teaserField "teaser" "posts" <> defaultContext
