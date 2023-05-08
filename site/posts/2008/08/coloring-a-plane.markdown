@@ -79,7 +79,7 @@ Unfortunately, this never happens no matter how far you go.
 In fact, we get a repeating pattern for the intersections that
 is consistent with our initial assumption.  We need another approach.
 
-![Dead end strategy for painting three colors](http://blog.chungyc.org/wp-content/uploads/2008/09/painting-three-colors-with-a-dead-end-path.png)
+![Dead end strategy for painting three colors](painting-three-colors-with-a-dead-end-path.png)
 
 Instead of trying to find two intersections from circles 
 that are centered around existing intersections,
