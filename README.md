@@ -5,8 +5,9 @@ with random musings on recent events and random topics.
 This project is responsible for generating the static site
 for the blog using [Hakyll].
 
-This project is not being put to actual use yet.
-It is currently in the process of migrating the existing blog setup off of PHP.
+Note that there is no license for this project for use by others.
+Except for files which note otherwise, do not copy any of the content.
+The content is publicly visible for knowledge sharing, not for direct use by others.
 
 [Stochastic Scribbles]: https://blog.chungyc.org/
 [Yoo Chung]: https://chungyc.org/
