@@ -39,6 +39,10 @@ serverRules = do
     route $ constRoute "robots.txt"
     compile copyFileCompiler
 
+  match "server/humans.txt" $ do
+    route $ constRoute "humans.txt"
+    compile copyFileCompiler
+
   create ["favicon.svg"] $ do
     route idRoute
     compile $ makeItem $ generateSvg favicon
