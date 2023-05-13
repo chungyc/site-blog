@@ -38,7 +38,7 @@ From the twin's reference frame, time flows slowly on Earth, it goes through tim
 and it slows down again on the way back.  The amount of time skipped is more than the amount of time slowed,
 so the twin on Earth ends up being older than the traveling twin when they meet again.
 
-However, this is not what the travling twin actually _sees_, because light from the twin on Earth
+However, this is not what the traveling twin actually _sees_, because light from the twin on Earth
 does not reach the traveling twin instantly.  If one works things out, what the traveling twin
 actually sees is that when the twin is traveling to the star, it _looks_ like time for the twin
 on Earth passes very slowly, but it looks like it starts flowing much quicker once the traveling twin
