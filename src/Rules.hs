@@ -161,7 +161,7 @@ postRules = do
                 bodyField "description",
                 defaultContext
               ]
-      posts <- recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
+      posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
       renderRss feedConfiguration feedContext posts >>= cleanupUrls
   where
     stripPrefix = gsubRoute "^posts/" (const "")
