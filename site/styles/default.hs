@@ -110,7 +110,7 @@ postStyle = do
   article # ".summary" ? do
     sym margin $ em 1
     sym2 padding (em 0) (em 2)
-    border (em 0.5) inset dodgerblue
+    border (em 0.5) inset $ setA 0.5 dodgerblue
 
   div # ".embedded-video" ? do
     textAlign center
