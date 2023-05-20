@@ -51,8 +51,7 @@ serverRules = do
     route $ setExtension "html"
     compile $
       pandocCompiler
-        >>= loadAndApplyTemplate defaultTemplate defaultContext
-        >>= cleanupUrls
+        >>= loadAndApplyTemplate defaultTemplate blogContext
 
 -- | Rules for generating the stylesheets for the blog.
 styleRules :: Rules ()
@@ -79,22 +78,20 @@ pageRules = do
                 listField "posts" postContext (pure posts),
                 constField "description" "Random musings in a variety of subjects, from science to religion.",
                 constField "title" "Archives",
-                defaultContext
+                blogContext
               ]
 
       makeItem ""
         >>= saveSnapshot "sitemap"
         >>= loadAndApplyTemplate "templates/front.html" frontContext
         >>= loadAndApplyTemplate defaultTemplate frontContext
-        >>= cleanupUrls
 
   match "about.markdown" $ do
     route $ constRoute "about/index.html"
     compile $
       pandocCompiler
         >>= saveSnapshot "sitemap"
-        >>= loadAndApplyTemplate defaultTemplate defaultContext
-        >>= cleanupUrls
+        >>= loadAndApplyTemplate defaultTemplate blogContext
 
   create ["archives/index.html"] $ do
     route idRoute
@@ -106,22 +103,20 @@ pageRules = do
               [ listField "posts" postContext (pure posts),
                 constField "description" "Archive of posts for the Stochastic Scribbles blog.",
                 constField "title" "Archives",
-                defaultContext
+                blogContext
               ]
 
       makeItem ""
         >>= saveSnapshot "sitemap"
         >>= loadAndApplyTemplate "templates/archive.html" archiveContext
         >>= loadAndApplyTemplate defaultTemplate archiveContext
-        >>= cleanupUrls
 
   match "contact.markdown" $ do
     route $ constRoute "contact/index.html"
     compile $
       pandocCompiler
         >>= saveSnapshot "sitemap"
-        >>= loadAndApplyTemplate defaultTemplate defaultContext
-        >>= cleanupUrls
+        >>= loadAndApplyTemplate defaultTemplate blogContext
 
 -- | Rules for generating the blog posts.
 postRules :: Rules ()
@@ -134,7 +129,6 @@ postRules = do
         >>= saveSnapshot "posts"
         >>= loadAndApplyTemplate "templates/post.html" postContext
         >>= loadAndApplyTemplate defaultTemplate postContext
-        >>= cleanupUrls
 
   match "posts/**.png" $ do
     route stripPrefix
@@ -147,22 +141,14 @@ postRules = do
   create ["feed/index.xml"] $ do
     route idRoute
     compile $ do
-      -- Used to strip "index.html" from the URLs.
-      let toCleanLink item = do
-            path <- getRoute (itemIdentifier item)
-            case path of
-              Nothing -> noResult "no route for identifier"
-              Just s -> pure . cleanupUrl . toUrl $ s
-
       let feedContext =
             mconcat
-              [ field "url" toCleanLink,
-                teaserField "description" "posts",
+              [ teaserField "description" "posts",
                 bodyField "description",
-                defaultContext
+                blogContext
               ]
       posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
-      renderRss feedConfiguration feedContext posts >>= cleanupUrls
+      renderRss feedConfiguration feedContext posts
   where
     stripPrefix = gsubRoute "^posts/" (const "")
     replaceSuffix = gsubRoute "\\.markdown$" (const "/index.html")
@@ -183,26 +169,9 @@ sitemapRules = do
     route idRoute
     compile $ do
       itemList <- loadAllSnapshots patterns "sitemap"
-
-      let itemContext = functionField "clean" clean <> defaultContext
-
-      let sitemapContext =
-            mconcat
-              [ listField "items" itemContext (return itemList),
-                defaultContext
-              ]
-
+      let sitemapContext = listField "items" blogContext (return itemList) <> blogContext
       makeItem "" >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapContext
   where
-    clean [url@('/' : _)] _
-      | Nothing <- prefix = return $ root ++ url
-      | Just s <- prefix = return $ root ++ s
-      where
-        prefix = needlePrefix "index.html" url
-        root = "https://blog.chungyc.org"
-    clean [url] _ = return url
-    clean _ _ = error "wrong number of arguments"
-
     patterns =
       "index.html"
         .||. "about.markdown"
@@ -213,11 +182,22 @@ sitemapRules = do
 defaultTemplate :: Identifier
 defaultTemplate = "templates/default.html"
 
--- | Clean up "index.html" from URLs in HTML items.
-cleanupUrls :: Item String -> Compiler (Item String)
-cleanupUrls = pure . fmap (withUrls cleanupUrl)
+-- | Context to be used for blog posts.
+postContext :: Context String
+postContext = teaserField "teaser" "posts" <> blogContext
 
--- | Clean up "index.html" from a given local URL.
+-- | Context to be used for all HTML pages.
+blogContext :: Context String
+blogContext = field "url" clean <> defaultContext
+  where
+    -- Clean up "index.html" from URLs.
+    clean item = do
+      path <- getRoute (itemIdentifier item)
+      case path of
+        Nothing -> noResult "no route for identifier"
+        Just s -> pure . cleanupUrl . toUrl $ s
+
+-- | Clean up "index.html" from a local URL.
 cleanupUrl :: String -> String
 cleanupUrl url@('/' : _)
   | Nothing <- prefix = url
@@ -225,7 +205,3 @@ cleanupUrl url@('/' : _)
   where
     prefix = needlePrefix "index.html" url
 cleanupUrl url = url
-
--- | Context to be used for blog posts.
-postContext :: Context String
-postContext = teaserField "teaser" "posts" <> defaultContext
