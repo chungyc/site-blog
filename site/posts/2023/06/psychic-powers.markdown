@@ -3,7 +3,10 @@ title: Psychic powers
 published: 2023-06-03
 ---
 
-Psychic powers such as telapathy, telekinesis, etc. are well-established.
+Can we move things with our minds?
+Can we read the thoughts of others?
+
+Yes, we can.
 
 <!--more-->
 
