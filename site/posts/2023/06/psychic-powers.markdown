@@ -56,3 +56,12 @@ It can work this way:
 The desire for psychic powers is the desire to do things we can already do,
 just with zero effort.
 There are also plenty of advanced examples of these powers we regularly use.
+
+[writing]: https://www.britannica.com/topic/writing
+[cell phones]: https://www.techopedia.com/definition/2955/mobile-phone
+[telerobotics]: https://en.wikipedia.org/wiki/Telerobotics
+[weather forecasting]: https://www.britannica.com/science/weather-forecasting
+[astronomical simulations]: https://universesandbox.com/
+[television]: https://www.britannica.com/technology/television-technology/Electronic-systems
+[interplanetary spacecraft]: https://solarsystem.nasa.gov/missions/
+[brain-computer interface]: https://en.wikipedia.org/wiki/Brain%E2%80%93computer_interface
