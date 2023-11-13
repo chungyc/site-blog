@@ -6,7 +6,7 @@ categories: Mathematics
 math: true
 ---
 
-I am reaching the tail end of reading Eugenina Cheng's new book, [Is Math Real?].
+I am reaching the tail end of reading Eugenia Cheng's new book, [Is Math Real?].
 It's been an enjoyable read so far.  The book reminds us that mathematics is
 not just a sterile set of rules to memorize, but a fertile and fun playground
 for the imagination backed by rigorous thinking.
