@@ -1,16 +1,17 @@
-<article>
+<article itemscope itemtype="https://schema.org/BlogPosting">
     <section class="byline">
+        <meta itemprop="headline" content="$title$"/>
         $-if(author)$
-        <p>By $author$.</p>
+        <p>By <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">$author$</span></span>.</p>
         $-else$
-        <p>By Yoo Chung.</p>
+        <p>By <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Yoo Chung</span><meta itemprop="url" content="https://chungyc.org/"/></span>.</p>
         $-endif$
-        <p>Published on $published$.</p>
+        <p>Published on <span itemprop="datePublished" content="$published$T00:00:00+00:00">$published$</span>.</p>
         $-if(updated)$
-        <p>Updated on $updated$.</p>
+        <p>Updated on <span itemprop="dateModified" content="$updated$T00:00:00+00:00">$updated$</span>.</p>
         $-endif$
     </section>
-    <section>
+    <section itemprop="articleBody">
         $body$
     </section>
 </article>
