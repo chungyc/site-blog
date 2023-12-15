@@ -112,9 +112,10 @@ postStyle = do
     sym2 padding (em 0) (em 2)
     border (em 0.5) inset $ setA 0.5 dodgerblue
 
-  div # ".embedded-video" ? do
+  div # ".embedded-video" ** star ? do
     textAlign center
     maxWidth $ pct 100
+    "aspect-ratio" -: "auto"
 
 figures :: Css
 figures = do
