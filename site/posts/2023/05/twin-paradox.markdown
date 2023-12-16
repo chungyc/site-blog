@@ -20,7 +20,7 @@ This is correct.  It is also an explanation that I have always found highly unsa
 
 <!--more-->
 
-There are two reasons I have been unhapy with it.
+There are two reasons I have been unhappy with it.
 
 *   If the traveling twin coasts along with no change in speed for most of
     the journey to the star and back, time for the twin on Earth should still
