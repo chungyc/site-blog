@@ -26,14 +26,17 @@ haskellCompiler = do
 postCompiler :: Compiler (Item String)
 postCompiler = do
   body <- getResourceBody
-  pandoc <- readPandocWith mathReaderOptions body
-  return $ writePandocWith mathWriterOptions pandoc
+  pandoc <- readPandocWith readerOptions body
+  return $ writePandocWith writerOptions pandoc
+  where
+    readerOptions = mathReaderWith defaultHakyllReaderOptions
+    writerOptions = mathWriterWith defaultHakyllWriterOptions
 
-mathReaderOptions :: ReaderOptions
-mathReaderOptions =
-  defaultHakyllReaderOptions
+mathReaderWith :: ReaderOptions -> ReaderOptions
+mathReaderWith options =
+  options
     { readerExtensions =
-        readerExtensions defaultHakyllReaderOptions
+        readerExtensions options
           <> extensionsFromList
             [ Ext_tex_math_single_backslash,
               Ext_tex_math_double_backslash,
@@ -42,9 +45,9 @@ mathReaderOptions =
             ]
     }
 
-mathWriterOptions :: WriterOptions
-mathWriterOptions =
-  defaultHakyllWriterOptions
+mathWriterWith :: WriterOptions -> WriterOptions
+mathWriterWith options =
+  options
     { -- We use KaTeX to render math, but the auto-render extension depends
       -- on how Pandoc writes out math in MathJax.  It does not work with
       -- how Pandoc writes out math in KaTeX.
