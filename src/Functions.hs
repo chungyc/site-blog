@@ -24,7 +24,7 @@ import Prelude hiding (div)
 -- * URL of the video
 --
 -- When there are three arguments, they are:
--- 
+--
 -- * URL of the video
 -- * width of the video
 -- * height of the video
@@ -33,7 +33,6 @@ import Prelude hiding (div)
 --
 -- > $youtube("https://www.youtube.com/embed/S7TUe5w6RHo")$
 -- > $youtube("https://www.youtube.com/embed/S7TUe5w6RHo", "560", "315")$
---
 youtubeField :: Context String
 youtubeField = functionField "youtube" $ pure . pure . embed
   where

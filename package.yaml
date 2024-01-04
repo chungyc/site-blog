@@ -1,11 +1,11 @@
 name:                blog
-version:             1.0.0
+version:             1.1.0
 github:              "chungyc/site-blog"
 homepage:            "https://blog.chungyc.org/"
 license:             AllRightsReserved
 author:              "Yoo Chung"
 maintainer:          "dev@chungyc.org"
-copyright:           "Copyright (C) 2023 Yoo Chung"
+copyright:           "Copyright (C) 2024 Yoo Chung"
 
 extra-source-files:
 - README.md
