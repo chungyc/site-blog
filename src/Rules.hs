@@ -1,14 +1,16 @@
 -- |
 -- Description: Rules for generating the blog.
--- Copyright: Copyright (C) 2023 Yoo Chung
+-- Copyright: Copyright (C) 2024 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
 module Rules (rules) where
 
 import Compilers
+import Functions
 import Hakyll
 import Icons
 
+-- | Rules for generating the blog.
 rules :: Rules ()
 rules = do
   templateRules
@@ -184,7 +186,9 @@ defaultTemplate = "templates/default.html"
 
 -- | Context to be used for blog posts.
 postContext :: Context String
-postContext = teaserField "teaser" "posts" <> blogContext
+postContext = functionFields <> teaserField "teaser" "posts" <> blogContext
+  where
+    functionFields = youtubeField
 
 -- | Context to be used for all HTML pages.
 blogContext :: Context String
