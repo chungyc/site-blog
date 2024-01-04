@@ -196,6 +196,9 @@ lightColorScheme = do
 
   blockquote ? do
     backgroundColor $ rgb 245 245 245
+
+  article # ".summary" ? do
+    backgroundColor $ rgb 250 250 250
   where
     headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
 
@@ -221,12 +224,11 @@ darkColorScheme = do
 
   footer ? borderTop (px 1) solid white
 
-  article # ".summary" ? do
-    sym margin $ em 1
-    sym padding $ em 1
-
   blockquote ? do
     backgroundColor $ rgb 30 30 30
+
+  article # ".summary" ? do
+    backgroundColor $ rgb 10 10 10
 
   figure |> img # (not ".keep-colors" <> "src" $= ".svg") ? do
     filter (invert $ pct 100)
