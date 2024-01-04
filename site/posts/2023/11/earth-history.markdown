@@ -11,14 +11,6 @@ It really makes it visceral how short human history is relative to all of Earth 
 I was also reminded how long multicellular life hadn't existed on Earth;
 the eras before their emergence were not those that I paid much attention to.
 
-<div class="embedded-video">
-<iframe width="560" height="315"
-    src="https://www.youtube.com/embed/S7TUe5w6RHo?si=77Nb78Ih__IGxb_A"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-</iframe>
-</div>
+$youtube("https://www.youtube.com/embed/S7TUe5w6RHo?si=77Nb78Ih__IGxb_A")$
 
 This is now my favorite video for showing on idle screens.

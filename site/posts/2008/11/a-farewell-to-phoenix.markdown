@@ -51,6 +51,4 @@ results, the best has yet to come as us humans back on Earth have only started a
 the wealth of data the lander sent back.  Although I have yet to hear what went on with
 the supposedly missing water that should have been in the Martian ground.
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8m4iKZNT4eE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/8m4iKZNT4eE")$

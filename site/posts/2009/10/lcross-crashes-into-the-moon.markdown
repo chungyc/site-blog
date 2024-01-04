@@ -52,12 +52,8 @@ To learn more about the LCROSS mission, go to the <a
 href="https://www.nasa.gov/mission_pages/LCROSS/main/index.html">LCROSS website</a> or
 watch the following four-minute video NASA created to show how the mission happened:
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tytIam_Ih3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/tytIam_Ih3E")$
 
 And NASA has already put up video taken by LCROSS right before the impact:
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VVYKjR1sJY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/VVYKjR1sJY4")$

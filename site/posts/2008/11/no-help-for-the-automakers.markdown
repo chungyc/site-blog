@@ -11,7 +11,7 @@ a bit surprising (although not all that much) since it's a common belief that th
 administration is partly in the pockets of fossil fuel-based domestic automakers (the rest
 being in the pocket of oil companies).  On the other hand, it is consistent with the
 Republican's free market policy.  What is rather more surprising is that the
-administration is supporting a $25 billion loan program for fuel-efficient vehicles.
+administration is supporting a $$25 billion loan program for fuel-efficient vehicles.
 
 Given how badly US automakers have forecast trends in the automobile market, it's no
 surprise that they're doing badly, and the current economic downturn only makes their

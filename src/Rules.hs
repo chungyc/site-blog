@@ -6,7 +6,6 @@
 module Rules (rules) where
 
 import Compilers
-import Functions
 import Hakyll
 import Icons
 
@@ -186,9 +185,7 @@ defaultTemplate = "templates/default.html"
 
 -- | Context to be used for blog posts.
 postContext :: Context String
-postContext = functionFields <> teaserField "teaser" "posts" <> blogContext
-  where
-    functionFields = youtubeField
+postContext = teaserField "teaser" "posts" <> blogContext
 
 -- | Context to be used for all HTML pages.
 blogContext :: Context String

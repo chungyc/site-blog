@@ -20,22 +20,18 @@ awkward moment as he misspeaks:
 > pretty nasty things about western Pennsylvania lately.  ...  And you know?  I couldn't
 > agree with them more. ...
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gLQGJ_T4UHA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/gLQGJ_T4UHA")$
 
-Like the phone conversation where <a
-href="https://content.time.com/time/specials/2007/article/0,28804,1643290_1643292_1847933,00.html">McCain
-supposedly rejects Spain</a>, which I think was a miscommunication resulting from a
+Like the phone conversation where
+[McCain supposedly rejects Spain](https://content.time.com/time/specials/2007/article/0,28804,1643290_1643292_1847933,00.html)
+which I think was a miscommunication resulting from a
 garbled phone conversation, I interpret his remarks as a slip of the tongue that is
 meaningless politically.  But it's hard not to find it amusing.  However, I'd be mighty
 annoyed yet again if the McCain campaign tries mind-blowing contortions to make things
-look like McCain said exactly what he meant to say but that everyone else misinterpreted
-him.
+look like McCain said exactly what he meant to say but that everyone else misinterpreted him.
 
-The second gaffe is the news about <a
-href="https://www.nytimes.com/2008/10/23/us/politics/23palin.html">Palin's $150,000
-wardrobe</a>.  While I completely understand the McCain-Palin campaign's need to make
+The second gaffe is the news about [Palin's $$150,000 wardrobe](https://www.nytimes.com/2008/10/23/us/politics/23palin.html)
+While I completely understand the McCain-Palin campaign's need to make
 Palin and her family look sharp for the cameras, I can't help but feel a bit of cognitive
 dissonance with their effort to make Palin seem like an average American hockey mom.
 Having several years' worth of the average American's income spent within a couple of
@@ -43,6 +39,5 @@ months on clothes and accessories tends to do that.
 
 As I said, I don't really think these gaffes are meaningful politically, and I don't
 consider them examples of disdain for average people or hypocrisy, but they're pretty
-amusing.  It makes me wonder if my satire about the <a
-href="/2008/10/vote-mccain-for-president/">Republican Party trying to be funny</a>
+amusing.  It makes me wonder if my satire about the [Republican Party trying to be funny](/2008/10/vote-mccain-for-president/)
 contains a kernel of truth ...

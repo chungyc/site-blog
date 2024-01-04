@@ -17,27 +17,34 @@ import Prelude hiding (div)
 -- Function field for embedding YouTube videos.
 --
 -- In the template, the function is named @youtube@.
--- The arguments are:
+-- It can be passed in either one or three arguments.
 --
+-- When there is only one argument, it is:
+--
+-- * URL of the video
+--
+-- When there are three arguments, they are:
+-- 
 -- * URL of the video
 -- * width of the video
 -- * height of the video
 --
 -- For example,
 --
+-- > $youtube("https://www.youtube.com/embed/S7TUe5w6RHo")$
 -- > $youtube("https://www.youtube.com/embed/S7TUe5w6RHo", "560", "315")$
 --
 youtubeField :: Context String
 youtubeField = functionField "youtube" $ pure . pure . embed
   where
-    embed [_, _, _, _] = error "some error"
+    embed [url] = renderHtml $ container (url, "560", "315")
     embed [url, w, h] = renderHtml $ container (url, w, h)
     embed _ = error "wrong number of arguments; expected (url, width, height)"
 
     container p = div (video p) ! class_ "embedded-video"
 
     video (url, w, h) =
-      iframe mempty
+      iframe ""
         ! src (fromString url)
         ! width (fromString w)
         ! height (fromString h)

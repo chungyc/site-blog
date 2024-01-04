@@ -31,6 +31,4 @@ data about the heliosphere.
 
 For a whole lot more details, here is the forty-minute press conference about IBEX:
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mTnwjd8CF1c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/mTnwjd8CF1c")$

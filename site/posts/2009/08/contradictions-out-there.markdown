@@ -12,7 +12,7 @@ It's no surprise that politics make people say contradictory things in the same 
 <li>I hate socialized medicine.  Leave my (government-run, socialized) Medicare alone. <!-- a townhall participant --></li>
 <li>I don't want no bureaucrat determining my healthcare.  Leave the current system (where bureaucrats determine my healthcare) alone.<!-- too many sources --></li>
 <li>The healthcare bill encourages living wills (through an amendment proposed by a Republican, where I could easily say to not disconnect the machines until I'm really, really dead), so it is a secret plot by Democrats to kill old people.<!-- too many sources --></li>
-<li>We should not encourage development of alternative energy because people want cheap energy.  Remember the pain of $4 per gallon (non-alternative, carbon-emitting) oil?<!-- a guest on the Rachel Maddow show --></li>
+<li>We should not encourage development of alternative energy because people want cheap energy.  Remember the pain of $$4 per gallon (non-alternative, carbon-emitting) oil?<!-- a guest on the Rachel Maddow show --></li>
 <li>Socialism is bad for quality food production.  Monsanto (a huge agricultural corporation) is an example of such socialism.<!-- a guest on the Colbert Report --></li>
 <li>I made a huge mistake.  But I should be forgiven and not resign, since God (who turns people into salt pillars for taking a peek, kicks out people because they took a bite out of a fruit, and burns people for eternity) is so forgiving.<!-- Mark Sanford --></li>
 <li>I'm quitting.  It's because I'm not a quitter.<!-- Sarah Palin --></li>

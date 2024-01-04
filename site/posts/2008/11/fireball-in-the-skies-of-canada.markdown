@@ -10,6 +10,4 @@ meteor rather than a crashing spacecraft of some kind, given just how bright it 
 be.  I just find the footage to be incredible, especially since no word of any damage from
 the meteor has been reported.
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XgKv_Zah7Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/XgKv_Zah7Gw")$

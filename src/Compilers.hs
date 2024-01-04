@@ -1,11 +1,12 @@
 -- |
 -- Description: Hakyll compilers for generating the blog.
--- Copyright: Copyright (C) 2023 Yoo Chung
+-- Copyright: Copyright (C) 2024 Yoo Chung
 -- License: All rights reserved
 -- Maintainer: web@chungyc.org
 module Compilers (postCompiler, haskellCompiler) where
 
 import Data.ByteString.Lazy (ByteString)
+import Functions
 import Hakyll
 import Text.Pandoc.Options
 
@@ -25,12 +26,13 @@ haskellCompiler = do
 -- | Compiler for a blog post.
 postCompiler :: Compiler (Item String)
 postCompiler = do
-  body <- getResourceBody
+  body <- getResourceBody >>= applyAsTemplate functionFields
   pandoc <- readPandocWith readerOptions body
   return $ writePandocWith writerOptions pandoc
   where
     readerOptions = mathReaderWith defaultHakyllReaderOptions
     writerOptions = mathWriterWith defaultHakyllWriterOptions
+    functionFields = youtubeField
 
 mathReaderWith :: ReaderOptions -> ReaderOptions
 mathReaderWith options =

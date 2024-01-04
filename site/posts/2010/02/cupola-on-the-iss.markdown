@@ -18,6 +18,4 @@ beautiful platform for looking outside at Earth or at space.
 The view must be so impressive that even astronauts were gawking outside during the
 ribbon-cutting ceremony for the Tranquility module and its cupola:
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rO45KoVPsxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/rO45KoVPsxk")$

@@ -14,6 +14,4 @@ the Spirit rover being stuck, it will now be serving as a static station observi
 Martian weather and seismological activity.  Not to mention that Opportunity is still
 roving ...
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uB8CpstmAus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/uB8CpstmAus")$

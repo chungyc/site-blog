@@ -73,6 +73,4 @@ which is the best theory we have so far for explaining gravitation.
 
 Finally, an extra treat with a video <a href="http://map.gsfc.nasa.gov/media/030651/index.html">from NASA</a> showing the evolution of the universe since the time of the light-dominated period of the universe, when light had a significant gravitational influence, up to today, when light is no longer a major source of gravitation:
 
-<div style="text-align:center;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sTWHs7xD9e0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/sTWHs7xD9e0")$

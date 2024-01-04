@@ -13,9 +13,7 @@ year period via <a
 href="https://slate.com/technology/2009/01/aas-4-supernova-expands-as-we-watch.html">Bad
 Astronomy</a>.
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VunToqmW9so" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/VunToqmW9so")$
 
 <!--more-->
 

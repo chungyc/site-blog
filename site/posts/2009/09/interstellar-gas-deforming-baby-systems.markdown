@@ -25,6 +25,4 @@ space.  It would be like how smoke trails behind as a steam locomotive speeds by
 
 If confirmed, this would be another example of how something any of us would call a vacuum is not quite a vacuum.
 
-<div class="embedded-video">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KZ_6wMqG4pU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
+$youtube("https://www.youtube.com/embed/KZ_6wMqG4pU")$
