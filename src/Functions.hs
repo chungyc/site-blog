@@ -38,7 +38,7 @@ youtubeField = functionField "youtube" $ pure . pure . embed
   where
     embed [url] = renderHtml $ container (url, "560", "315")
     embed [url, w, h] = renderHtml $ container (url, w, h)
-    embed _ = error "wrong number of arguments; expected (url, width, height)"
+    embed _ = error "wrong number of arguments; expected (url) or (url, width, height)"
 
     container p = div (video p) ! class_ "embedded-video"
 
