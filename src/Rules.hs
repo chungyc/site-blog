@@ -6,6 +6,8 @@
 module Rules (rules) where
 
 import Compilers
+import Data.Map.Strict qualified as M
+import Data.Time.Format (defaultTimeLocale, formatTime)
 import Hakyll
 import Icons
 
@@ -97,11 +99,11 @@ pageRules = do
   create ["archives/index.html"] $ do
     route idRoute
     compile $ do
-      posts <- recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
+      postsField <- archivePostsField $ loadAllSnapshots "posts/**.markdown" "posts"
 
       let archiveContext =
             mconcat
-              [ listField "posts" postContext (pure posts),
+              [ postsField,
                 constField "description" "Archive of posts for the Stochastic Scribbles blog.",
                 constField "title" "Archives",
                 blogContext
@@ -206,3 +208,30 @@ cleanupUrl url@('/' : _)
   where
     prefix = needlePrefix "index.html" url
 cleanupUrl url = url
+
+-- | Turns list of posts into a list field with annual sections.
+--
+-- * @years@ contains the list of annual sections.
+-- * Each annual section in turn contains a list of posts in @posts@.
+archivePostsField :: Compiler [Item String] -> Compiler (Context a)
+archivePostsField posts = do
+  return $ listField "years" sectionContext $ groupByYear posts
+  where
+    sectionContext = yearField <> postsField
+    yearField = field "year" $ \(Item {itemBody = (year, _)}) -> pure year
+    postsField = listFieldWith "posts" postContext $ \(Item {itemBody = (_, ps)}) -> recentFirst ps
+
+-- | Groups a list of posts by year.
+groupByYear :: Compiler [Item String] -> Compiler [Item (String, [Item String])]
+groupByYear posts = do
+  tagged <- posts >>= mapM (tagYear . pure)
+  let mapped = M.fromListWith (++) $ map (\(k, v) -> (k, [v])) tagged
+  mapM makeItem $ M.toDescList mapped
+
+-- | Tags a post with its publication year.
+tagYear :: Compiler (Item String) -> Compiler (String, Item String)
+tagYear p = do
+  item <- p
+  t <- getItemUTC defaultTimeLocale $ itemIdentifier item
+  let year = formatTime defaultTimeLocale "%Y" t
+  return (year, item)

@@ -34,12 +34,14 @@ library:
   - blaze-html
   - blaze-markup
   - bytestring
+  - containers
   - diagrams-core
   - diagrams-lib
   - diagrams-svg
   - pandoc
   - random
   - svg-builder
+  - time
 
 executables:
   site:
