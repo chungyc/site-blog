@@ -22,7 +22,14 @@ Yes, there are humans who occasionally display similar levels of mechanical resp
 through rote recitation of talking points, but I don't consider these
 great displays of intelligence, so they would be the wrong target to compare against.
 
-<!-- Discuss what might be implied by how machine learning works. -->
+I am not too worried about machines taking over everything any time soon,
+but the sophistication of large language models does make me wonder about our own intelligence.
+A large part of machine learning is basically curve fitting,
+albeit very sophisticated curve fitting.
+Does this have implications for what many things we consider intelligence in ourselves are?
+Are they mostly a similar sort of highly sophisticated curve fitting
+instead of any sort of conscious thinking?
+Or is even conscious thinking ultimately a highly advanced form of curve fitting?
 
 [Bard]: https://bard.google.com/
 [ChatGPT]: https://chat.openai.com/
