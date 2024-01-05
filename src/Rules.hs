@@ -214,8 +214,8 @@ cleanupUrl url = url
 -- * @years@ contains the list of annual sections.
 -- * Each annual section in turn contains a list of posts in @posts@.
 archivePostsField :: Compiler [Item String] -> Compiler (Context a)
-archivePostsField posts = do
-  return $ listField "years" sectionContext $ groupByYear posts
+archivePostsField posts =
+  pure $ listField "years" sectionContext $ groupByYear posts
   where
     sectionContext = yearField <> postsField
     yearField = field "year" $ \(Item {itemBody = (year, _)}) -> pure year
