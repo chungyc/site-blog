@@ -1,7 +1,7 @@
 ---
 title: Large language models
 description: Large language models such as ChatGPT and Bard are impressive, but I think they are overrated a bit too much.
-published: 2024-01-10
+published: 2024-01-04
 categories: Computer Science
 ---
 
@@ -13,7 +13,15 @@ but they do not actually _know_ anything.
 
 <!--more-->
 
-<!-- Describe specifics on how it appears not to know things. -->
+Most of the time when I interact with these large language models,
+I can't help but feel that there is something artificial about them.
+They sound like they are repeating talking points that a marketing department came up with,
+without a true understanding of what they are talking about.
+When talking about something in depth,
+they will frequently answer with something entirely different than what is being asked,
+with no awareness that they are doing this.
+And for niche topics for which there are only a few web pages discussing them,
+the answers would sometimes be suspiciously similar to what is on these web pages.
 
 There seems to a general feeling that the [Turing Test] is obsolete these days,
 but as far as I am concerned, current levels of artificial intelligence
@@ -25,11 +33,10 @@ great displays of intelligence, so they would be the wrong target to compare aga
 I am not too worried about machines taking over everything any time soon,
 but the sophistication of large language models does make me wonder about our own intelligence.
 A large part of machine learning is basically curve fitting,
-albeit very sophisticated curve fitting.
+albeit highly sophisticated curve fitting.
 Does this have implications for what many things we consider intelligence in ourselves are?
-Are they mostly a similar sort of highly sophisticated curve fitting
-instead of any sort of conscious thinking?
-Or is even conscious thinking ultimately a highly advanced form of curve fitting?
+Are they mostly a similar sort of curve fitting instead of any sort of conscious thinking?
+Or is even conscious thinking ultimately an incredibly advanced form of curve fitting?
 
 [Bard]: https://bard.google.com/
 [ChatGPT]: https://chat.openai.com/
