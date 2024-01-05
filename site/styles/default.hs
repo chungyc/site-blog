@@ -122,6 +122,13 @@ postStyle = do
     maxWidth $ pct 100
     "aspect-ratio" -: "auto"
 
+  pre ? do
+    borderStyle solid
+    borderWidth $ px 1
+    marginRight $ em 1
+    marginLeft $ em 1
+    sym padding $ em 0.5
+
 figures :: Css
 figures = do
   figure ? do
@@ -186,6 +193,8 @@ lightColorScheme = do
   a # link ? color blue
   a # visited ? color purple
 
+  pre ? borderColor lightgrey
+
   headingColors headingColor
 
   header |> (div # ".site-title" <> div # ".slogan") ? do
@@ -210,6 +219,8 @@ darkColorScheme = do
 
   a # link ? color cyan
   a # visited ? color pink
+
+  pre ? borderColor dimgrey
 
   headingColors headingColor
 
