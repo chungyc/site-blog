@@ -141,6 +141,10 @@ postRules = do
     route stripPrefix
     compile copyFileCompiler
 
+  match "posts/**.webp" $ do
+    route stripPrefix
+    compile copyFileCompiler
+
   create ["feed/index.xml"] $ do
     route idRoute
     compile $ do
@@ -214,8 +218,8 @@ cleanupUrl url = url
 -- * @years@ contains the list of annual sections.
 -- * Each annual section in turn contains a list of posts in @posts@.
 archivePostsField :: Compiler [Item String] -> Compiler (Context a)
-archivePostsField posts = do
-  return $ listField "years" sectionContext $ groupByYear posts
+archivePostsField posts =
+  pure $ listField "years" sectionContext $ groupByYear posts
   where
     sectionContext = yearField <> postsField
     yearField = field "year" $ \(Item {itemBody = (year, _)}) -> pure year
@@ -224,14 +228,14 @@ archivePostsField posts = do
 -- | Groups a list of posts by year.
 groupByYear :: Compiler [Item String] -> Compiler [Item (String, [Item String])]
 groupByYear posts = do
-  tagged <- posts >>= mapM (tagYear . pure)
-  let mapped = M.fromListWith (++) $ map (\(k, v) -> (k, [v])) tagged
-  mapM makeItem $ M.toDescList mapped
+  tagged <- mapM (tagYear . pure) =<< posts
+  let grouped = M.fromListWith (++) $ map (\(k, v) -> (k, [v])) tagged
+  mapM makeItem $ M.toDescList grouped
 
 -- | Tags a post with its publication year.
 tagYear :: Compiler (Item String) -> Compiler (String, Item String)
-tagYear p = do
-  item <- p
+tagYear itemM = do
+  item <- itemM
   t <- getItemUTC defaultTimeLocale $ itemIdentifier item
   let year = formatTime defaultTimeLocale "%Y" t
   return (year, item)
