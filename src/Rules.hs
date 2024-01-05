@@ -78,6 +78,7 @@ pageRules = do
       let frontContext =
             mconcat
               [ boolField "front" (const True),
+                boolField "math" (const True),
                 listField "posts" postContext (pure posts),
                 constField "description" "Random musings in a variety of subjects, from science to religion.",
                 constField "title" "Archives",
