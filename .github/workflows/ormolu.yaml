@@ -18,7 +18,7 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: haskell-actions/run-ormolu@v14
+      - uses: haskell-actions/run-ormolu@v15
         with:
           respect-cabal-files: false
           extra-args: '-o -XGHC2021 -o -XOverloadedStrings'
