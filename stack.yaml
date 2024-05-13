@@ -5,7 +5,7 @@
 # Resolver to choose a 'specific' stackage snapshot or a compiler version.
 # A snapshot resolver dictates the compiler version and the set of packages
 # to be used for project dependencies.
-resolver: lts-21.24
+resolver: lts-22.17
 
 # User packages to be built.
 packages:
@@ -15,5 +15,7 @@ packages:
 # These entries can reference officially published versions as well as
 # forks / in-progress versions pinned to a git hash.
 extra-deps:
+
+  # Uses properties and media query functions not released yet.
   - git: https://github.com/sebastiaanvisser/clay.git
-    commit: f87f86408c01dece3bc0c46057e574b6ee90f6b0
+    commit: a59f9c6e56cb4870583b7b6bab0332f1d7a75b78
