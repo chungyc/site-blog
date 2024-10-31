@@ -230,7 +230,7 @@ darkColorScheme = do
   article # ".summary" ? do
     backgroundColor $ rgb 10 10 10
 
-  figure |> img # (not ".keep-colors" <> "src" $= ".svg") ? do
+  figure |> img # (not (byClass "keep-colors") <> "src" $= ".svg") ? do
     filter (invert $ pct 100)
   where
     headingColor n = rgb (255 - n * 20) (255 - n * 20) (155 - n * 10)
