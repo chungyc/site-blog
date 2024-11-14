@@ -15,4 +15,4 @@ then it usually take more than a couple of hours when I make an attempt at cooki
 The mystery has finally been solved by [xkcd](https://xkcd.com/).
 It's time dilation.
 
-![Relativistic recipe; from [xkcd](https://xkcd.com/2767/)](recipe_relativity.png)
+![Relativistic recipe; from [xkcd](https://xkcd.com/2767/)](recipe_relativity.png){itemprop="image"}
