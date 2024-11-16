@@ -91,6 +91,7 @@ headings :: Css
 headings = do
   (h1 <> h2 <> h3 <> h4 <> h5 <> h6) ? do
     fontFamily ["Verdana"] [sansSerif, serif, monospace]
+    textAlign $ alignSide sideLeft
 
   h1 ? fontSize (em 2)
   h2 ? fontSize (em 1.8)
