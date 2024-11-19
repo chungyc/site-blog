@@ -24,6 +24,19 @@
     <link rel="me" href="https://mathstodon.xyz/@chungyc">
     $-endif$
 
+    <meta property="og:title" content="$if(front)$Stochastic Scribbles$else$$title$$endif$">
+    <meta property="og:type" content="$if(og-type)$$og-type$$else$website$endif$">
+    <meta property="og:image" content="$if(image)$$image$$else$/favicon.svg$endif$">
+    <meta property="og:url" content="https://chungyc.org$url$">
+    <meta property="og:site_name" content="Stochastic Scribbles">
+    $-if(description)$
+    <meta property="og:description" content="$description$">
+    $-endif$
+    $-if(post)$
+    <meta property="article:published_time" content="$published$">
+    <meta property="article:author" content="$if(author-url)$$author-url$$else$https://chungyc.org/$endif$">
+    $-endif$
+
     $-if(math)$
     <!-- Use KaTeX to render math. -->
     <link rel="stylesheet"

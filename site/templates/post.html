@@ -32,7 +32,7 @@
     <section itemprop="articleBody">
         $body$
     </section>
-    <meta itemprop="image" content="/favicon.svg" />
+    <meta itemprop="image" content="$if(image)$$image$$else$/favicon.svg$endif$" />
     $-if(description)$
     <meta itemprop="description" content="$description$"/>
     $-endif$

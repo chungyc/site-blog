@@ -192,7 +192,13 @@ defaultTemplate = "templates/default.html"
 
 -- | Context to be used for blog posts.
 postContext :: Context String
-postContext = teaserField "teaser" "posts" <> blogContext
+postContext =
+  mconcat
+    [ boolField "post" (const True),
+      constField "og-type" "article",
+      teaserField "teaser" "posts",
+      blogContext
+    ]
 
 -- | Context to be used for all HTML pages.
 blogContext :: Context String
