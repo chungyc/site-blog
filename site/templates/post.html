@@ -2,18 +2,38 @@
     <section class="byline">
         <meta itemprop="headline" content="$title$"/>
         $-if(author)$
-        <p>By <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">$author$</span></span>.</p>
+        <p>
+          By
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">$author$</span>
+            $-if(author-url)$
+            <link itemprop="url" href="$author-url$"/>
+            $-endif$
+            $-if(author-fediverse)$
+            <meta name="fediverse:creator" content="$author-fediverse$"/>
+            $-endif$
+          </span>.
+        </p>
         $-else$
-        <p>By <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Yoo Chung</span><meta itemprop="url" content="https://chungyc.org/"/></span>.</p>
-        <meta name="fediverse:creator" content="@chungyc@mathstodon.xyz">
+        <p>
+          By
+          <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Yoo Chung</span>
+            <link itemprop="url" href="https://chungyc.org/"/>
+            <meta name="fediverse:creator" content="@chungyc@mathstodon.xyz"/>
+          </span>.
+        </p>
         $-endif$
         <p>Published on <span itemprop="datePublished" content="$published$T00:00:00+00:00">$published$</span>.</p>
         $-if(updated)$
         <p>Updated on <span itemprop="dateModified" content="$updated$T00:00:00+00:00">$updated$</span>.</p>
         $-endif$
     </section>
-    <section>
+    <section itemprop="articleBody">
         $body$
     </section>
     <meta itemprop="image" content="/favicon.svg" />
+    $-if(description)$
+    <meta itemprop="description" content="$description$"/>
+    $-endif$
 </article>
