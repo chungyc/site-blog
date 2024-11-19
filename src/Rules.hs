@@ -182,6 +182,7 @@ sitemapRules = do
     patterns =
       "index.html"
         .||. "about.markdown"
+        .||. "contact.markdown"
         .||. "archives/index.html"
         .||. "posts/**.markdown"
 
