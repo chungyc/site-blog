@@ -1,7 +1,7 @@
 ---
 title: Using Bridgy Fed
 description: Trying out Bridgy Fed to provide blog updates to Mastodon.
-published: 2024-11-20
+published: 2024-11-21
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Fediverse_logo_proposal.svg/600px-Fediverse_logo_proposal.svg.png
 ---
 
