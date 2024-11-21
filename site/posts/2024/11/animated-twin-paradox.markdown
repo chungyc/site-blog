@@ -33,7 +33,7 @@ the big skip in time while turning around more than makes up for the traveling t
 ultimately experiencing less time.
 
 Even if you do not understand what all the lines mean,
-the animation should still give a visceral sense of their being a big skip,
+the animation should still give a visceral sense of there being a big skip,
 more than what an equivalent still image might give you.
 I made this animation as a test case to confirm ideas I had about
 creating SVG animations, but I was struck by how much more obvious
