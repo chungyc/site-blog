@@ -2,7 +2,7 @@
 title: Using RSS Parrot
 description: RSS Parrot has been used to set up a dedicated Fediverse account for the blog which only posts updates.
 published: 2024-11-20
-image: https://upload.wikimedia.org/wikipedia/commons/9/93/Fediverse_logo_proposal.svg
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Fediverse_logo_proposal.svg/600px-Fediverse_logo_proposal.svg.png
 ---
 
 I have been thinking about sharing posts from this blog to Mastodon, but I did not want to share them from my personal Mastodon account.  I would rather keep blog updates separate from content that
