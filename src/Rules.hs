@@ -70,19 +70,11 @@ styleRules = do
 -- | Rules for generating the non-post pages for the blog.
 pageRules :: Rules ()
 pageRules = do
-  create ["index.html"] $ do
-    route idRoute
+  match "index.markdown" $ do
+    route $ constRoute "index.html"
     compile $ do
       posts <- fmap (take 5) . recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
-
-      let frontContext =
-            mconcat
-              [ boolField "front" (const True),
-                listField "posts" postContext (pure posts),
-                constField "description" "Random musings in a variety of subjects, from science to religion.",
-                constField "title" "Archives",
-                blogContext
-              ]
+      let frontContext = listField "posts" postContext (pure posts) <> blogContext
 
       makeItem ""
         >>= saveSnapshot "sitemap"

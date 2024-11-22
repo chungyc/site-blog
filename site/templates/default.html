@@ -20,11 +20,6 @@
     <link rel="stylesheet" href="/styles/default.css">
     <link rel="alternate" type="application/rss+xml" href="/feed/">
     <link rel="privacy-policy" href="/about/#privacy">
-    $-if(front)$
-    <link rel="me" href="https://mathstodon.xyz/@chungyc">
-    <link rel="me" href="https://rss-parrot.net/u/blog.chungyc.org">
-    <link rel="me" href="https://web.brid.gy/blog.chungyc.org">
-    $-endif$
 
     <meta property="og:title" content="$if(front)$Stochastic Scribbles$else$$title$$endif$">
     <meta property="og:type" content="$if(og-type)$$og-type$$else$website$endif$">
@@ -58,6 +53,10 @@
             integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
             crossorigin="anonymous"
             onload="renderMathInElement(document.body);"></script>
+    $-endif$
+
+    $-if(head-extra)$
+    $head-extra$
     $-endif$
   </head>
 
