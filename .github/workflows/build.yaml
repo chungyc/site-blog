@@ -38,3 +38,53 @@ jobs:
 
       - name: Build site
         run: stack exec site build
+
+      - id: paths
+        name: Get paths
+        run: |
+          echo "executable=$(stack path --local-install-root)/bin/site" >> $GITHUB_OUTPUT
+
+      - name: Upload executable
+        uses: actions/upload-artifact@v4
+        with:
+          name: executable
+          path: ${{ steps.paths.outputs.executable }}
+
+      - name: Upload site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+          include-hidden-files: true
+
+  deploy:
+    if: github.ref_name == 'main'
+    needs: build
+    concurrency: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Download site
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+
+      - name: Download executable
+        uses: actions/download-artifact@v4
+        with:
+          name: executable
+
+      - name: rsync
+        run: |
+          eval $(ssh-agent -t 1800)
+          ssh-add - <<< ${CHUNGYC_SSH_PRIVATE_KEY}
+          mkdir ~/.ssh
+          echo ${SSH_KNOWN_HOSTS} > ~/.ssh/known_hosts
+          chmod u+x site
+          ./site deploy
+        env:
+          CHUNGYC_SSH_PRIVATE_KEY: ${{ secrets.CHUNGYC_SSH_PRIVATE_KEY }}
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
