@@ -3,6 +3,7 @@ title: Global map of Mercury
 published: 2009-12-16
 categories: Astronomy
 tags: Mercury,MESSENGER
+image: https://blog.chungyc.org/2009/12/global-map-of-mercury/mercury-map.jpg
 ---
 
 It is still more than a year before the <a href="https://messenger.jhuapl.edu/">MESSENGER
