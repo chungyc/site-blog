@@ -31,7 +31,12 @@
     $-endif$
     $-if(post)$
     <meta property="article:published_time" content="$published$">
-    <meta property="article:author" content="$if(author-url)$$author-url$$else$https://chungyc.org/$endif$">
+    $-if(author)$
+    $-else$
+    <meta property="article:author" content="https://chungyc.org/">
+    <meta     property="profile:first_name" content="Yoo">
+    <meta     property="profile:last_name" content="Chung">
+    $-endif$
     $-endif$
 
     $-if(math)$
