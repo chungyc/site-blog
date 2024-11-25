@@ -2,7 +2,7 @@
 title: Skipping directly into a black hole
 description: Another giant star collapsed directly into a black hole without exploding in a supernova first.
 published: 2024-11-11
-category: Astronomy
+categories: Astronomy
 ---
 
 Most giant stars which collapse into a black hole explode in a supernova first.

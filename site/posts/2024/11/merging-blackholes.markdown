@@ -2,7 +2,7 @@
 title: Merging supermassive black holes
 description: A high-energy bust of light in a distant galaxy may be two supermassive black holes orbiting each other and on the verge of merging.
 published: 2024-11-15
-category: Astronomy
+categories: Astronomy
 image: /2024/11/merging-blackholes/AT2021hdr.png
 ---
 

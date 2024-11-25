@@ -2,7 +2,7 @@
 title: 'Elementary physics: reductionism or holism?'
 description: Elementary physics is hard, no matter whether you take a reductionist or holistic approach.  This is said so well by xkcd.
 published: 2024-11-16
-category: Physics
+categories: Physics
 image: /2024/11/elementary-physics/paths.png
 ---
 
