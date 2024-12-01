@@ -3,6 +3,7 @@ title: Cosmic latte
 description: Cosmic latte is the average color of the universe.
 published: 2024-12-01
 categories: Astronomy
+image: https://apod.nasa.gov/apod/image/2412/CosmicLatte_jhu_960.jpg
 ---
 
 Today I learned of [cosmic latte].
