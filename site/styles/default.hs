@@ -110,8 +110,9 @@ postStyle = do
 
   article # ".summary" ? do
     sym margin $ em 1
-    sym2 padding (em 0) (em 2)
-    border (em 0.5) inset $ setA 0.5 dodgerblue
+    sym2 padding (em 1) (em 2)
+    borderTop (em 0.5) solid $ setA 0.5 dodgerblue
+    borderBottom (em 0.5) solid $ setA 0.5 dodgerblue
 
   div # ".embedded-video" ? do
     textAlign center
@@ -197,9 +198,6 @@ lightColorScheme = do
 
   blockquote ? do
     backgroundColor $ rgb 245 245 245
-
-  article # ".summary" ? do
-    backgroundColor $ rgb 250 250 250
   where
     headingColor n = rgb (n * 20) (n * 20) (100 + n * 10)
 
@@ -227,9 +225,6 @@ darkColorScheme = do
 
   blockquote ? do
     backgroundColor $ rgb 30 30 30
-
-  article # ".summary" ? do
-    backgroundColor $ rgb 10 10 10
 
   figure |> img # (not (byClass "keep-colors") <> "src" $= ".svg") ? do
     filter (invert $ pct 100)
