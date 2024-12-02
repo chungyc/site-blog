@@ -140,14 +140,8 @@ postRules = do
   create ["feed/index.xml"] $ do
     route idRoute
     compile $ do
-      let feedContext =
-            mconcat
-              [ teaserField "description" "posts",
-                bodyField "description",
-                blogContext
-              ]
       posts <- fmap (take 10) . recentFirst =<< loadAllSnapshots "posts/**.markdown" "posts"
-      renderRss feedConfiguration feedContext posts
+      renderRss feedConfiguration blogContext posts
   where
     stripPrefix = gsubRoute "^posts/" (const "")
     replaceSuffix = gsubRoute "\\.markdown$" (const "/index.html")
