@@ -2,6 +2,7 @@
 title: Twin paradox, but with animation
 description: Using an animated spacetime diagram, explains how time flows for the twin on Earth from the perspective of the traveling twin.
 published: 2024-11-22
+updated: 2024-12-02
 categories: Physics
 tags: special relativity, twin paradox
 image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Animated_world_lines_for_twins.svg/1024px-Animated_world_lines_for_twins.svg.png
@@ -15,7 +16,7 @@ Following up on a [previous exposition] of the twin paradox in special relativit
 
 In the animation below, the world lines begin with both twins at the same place at the same time,
 and one twin travels away from Earth before turning back, where all the acceleration happens.[^endpoints]
-These are colored blue and red, while we also include a black line which shows what counts as "now"
+These are colored, while we also include a neutrally colored line which shows what counts as "now"
 from the perspective of the traveling twin.
 
 [^endpoints]: Presumably the traveling twin would also like to start from and stop at Earth,
