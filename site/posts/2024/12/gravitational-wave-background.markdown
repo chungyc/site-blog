@@ -3,7 +3,7 @@ title: Cosmic gravitational wave background
 description: We are in the earliest stages of mapping the cosmic gravitational wave background using millisecond pulsars.  After the release of observations by NANOGrav last year, MeerKAT has released their own observations.
 published: 2024-12-04
 categories: Physics
-image: /2024/12/gravitational-wave-background/radiometer-map.webp)
+image: /2024/12/gravitational-wave-background/radiometer-map.webp
 ---
 
 The [confirmed detection of gravitational waves] within the past decade was one of the more exciting news in physics.  However, like observatories based on electromagnetic waves, only a narrow frequency band of gravitational waves can be detected by the kilometers-long gravitational observatories we have.  These can detect black hole mergers, but they have no hope of detecting gravitational waves that are suspected to have been sloshing around our universe right after the Big Bang.
