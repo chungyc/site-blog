@@ -5,7 +5,7 @@ homepage:            "https://blog.chungyc.org/"
 license:             AllRightsReserved
 author:              "Yoo Chung"
 maintainer:          "dev@chungyc.org"
-copyright:           "Copyright (C) 2024 Yoo Chung"
+copyright:           "Copyright (C) 2008-2025 Yoo Chung"
 
 extra-source-files:
 - README.md
