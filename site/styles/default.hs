@@ -117,12 +117,12 @@ postStyle = do
   div # ".embedded-video" ? do
     textAlign center
     maxWidth $ pct 100
-    "aspect-ratio" -: "auto"
+    aspectRatio auto
 
   div # ".embedded-video" ** star ? do
     textAlign center
     maxWidth $ pct 100
-    "aspect-ratio" -: "auto"
+    aspectRatio auto
 
 figures :: Css
 figures = do
