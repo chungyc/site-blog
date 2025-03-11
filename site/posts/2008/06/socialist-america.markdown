@@ -8,7 +8,7 @@ tags: capitalism,socialism
 Socialism seems to be alive and well in America, despite rhetoric to the
 contrary.  The government <a href="https://www.npr.org/templates/story/story.php?storyId=89064840">bailed out Bear Stearns</a>
 with a very large subsidy, while Congress has passed a
-<a href="https://www.washingtonpost.com/wp-dyn/content/article/2008/06/24/AR2008062400176.html?hpid=topnews">law to support homeowners that are in danger of foreclosures</a>.  Not that this is
+<a href="https://www.washingtonpost.com/wp-dyn/content/article/2008/06/24/AR2008062400176.html">law to support homeowners that are in danger of foreclosures</a>.  Not that this is
 necessarily a bad thing, but there's a slight cognitive dissonance in that a lot
 of people in power extol the virtue of a pure free market with minimum
 regulation.

@@ -19,4 +19,5 @@ were taken when MESSENGER made its closest approach.
 Fortunately, the MESSENGER spacecraft is fine now, and it still took plenty of images as
 it approached Mercury.
 
-![MESSENGER seeing previous unseen parts of Mercury; from [Johns Hopkins Applied Physics Laboratory](https://civspace.jhuapl.edu/destinations/missions/messenger)](mercury.jpg)
+<!-- Image from defunct link: https://civspace.jhuapl.edu/destinations/missions/messenger -->
+![MESSENGER seeing previous unseen parts of Mercury; from Johns Hopkins Applied Physics Laboratory](mercury.jpg)

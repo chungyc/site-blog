@@ -13,7 +13,8 @@ although it will be <em>much</em> more exciting when they
 manage head-on collisions between two beams a couple of months later,
 the LHC is also very impressive in terms of the supporting computing infrastructure.
 
-![CERN Computing Center; from [CERN](https://cdsweb.cern.ch/record/1103476)](0804041_23-a4-at-144-dpi.jpg)
+<!-- Image is from defunct link: https://cdsweb.cern.ch/record/1103476 -->
+![CERN Computing Center; from CERN](0804041_23-a4-at-144-dpi.jpg)
 
 <!--more-->
 

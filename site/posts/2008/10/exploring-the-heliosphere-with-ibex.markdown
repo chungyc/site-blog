@@ -23,7 +23,10 @@ of more decades to reach the edge of the heliosphere, there's no way Pegasus cou
 IBEX to the boundary in a reasonable amount of time.  So it got me wondering just how IBEX
 is supposed to explore the heliosphere without actually getting there.
 
+<!--
+Following image no longer exists.
 ![IBEX; from [NASA](https://www.nasa.gov/mission_pages/ibex/IBEXQandA.html)](http://www.nasa.gov/images/content/263070main2_IBEXArtistImpression226x170.jpg)
+-->
 
 <!--more-->
 
