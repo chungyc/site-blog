@@ -37,7 +37,7 @@ This led me to the realization of the stark contrast made above.
 [impending ruling]: https://www.reuters.com/world/asia-pacific/south-korea-constitutional-court-rule-yoons-impeachment-april-4-2025-04-01/
 
 I am still uneasy about the impending ruling, though,
-given how much the constitutional court is dragging with its ruling,
+given how much the constitutional court is dragging its feet with its ruling,
 compared to previous rulings for presidents with much less serious and obvious crimes,
 It reminds me of how the US Supreme Court dragged its feet on what
 seemed to be an obvious issue, only to rule that the US president
