@@ -6,6 +6,7 @@ description: |
   Republicans criminally investigate political oppenents too much, even for things that were made up.
 published: 2025-04-01
 category: Politics
+image: /2025/04/politics-investigations/democrat-republican.png
 ---
 
 Democrats criminally investigate political opponents too little,
@@ -45,3 +46,8 @@ At least I am pretty sure the announcement about the impending ruling
 was not an April Fools' Day prank.
 
 [not criminally liable]: https://www.aclu.org/press-releases/supreme-court-grants-trump-broad-immunity-for-official-acts-placing-presidents-above-the-law
+
+<!--
+Post image democrat-republican.png is from
+https://commons.wikimedia.org/wiki/File:Donkey_and_elephant_-_democrat_blue_and_republican_red_-_polygon.svg.
+-->
