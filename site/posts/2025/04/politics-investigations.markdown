@@ -3,7 +3,7 @@ title: A difference between Democrats and Republicans
 description: |
   Democrats criminally investigate political opponents too little, even for things that should be investigated.
   
-  Republicans criminally investigate political oppenents too much, even for things that were made up.
+  Republicans criminally investigate political opponents too much, even for things that were made up.
 published: 2025-04-01
 category: Politics
 image: /2025/04/politics-investigations/democrat-republican.png
@@ -13,7 +13,7 @@ Democrats criminally investigate political opponents too little,
 even for extremely serious crimes that should be investigated.
 They are less hesitant to do so for political allies.
 
-Republicans criminally investigate political oppenents too much,
+Republicans criminally investigate political opponents too much,
 even for things that have not happened and were completely made up.
 They have to be dragged kicking and screaming to do so for political allies,
 if they do so at all.
