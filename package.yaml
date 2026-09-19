@@ -15,7 +15,7 @@ category:            Personal
 
 description:         Blog of Yoo Chung with random musings on recent events and random topics.
 
-language: GHC2021
+language: GHC2024
 
 default-extensions:
 - OverloadedStrings
